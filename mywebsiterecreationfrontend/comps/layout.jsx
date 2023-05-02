@@ -5,11 +5,9 @@ export default function Layout(props) {
     return (
         <>
             <NavBar></NavBar>
-            <body>
-                <div>
+            <div>
                 {props.children}
-                </div>
-            </body>
+            </div>
             <Footer></Footer>
         </>
     )
