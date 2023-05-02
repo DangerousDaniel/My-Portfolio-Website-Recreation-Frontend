@@ -1,3 +1,5 @@
+ArticleDetail.pageTitle = 'Article Detail'
+
 export default function ArticleDetail() {
     return (
         <>

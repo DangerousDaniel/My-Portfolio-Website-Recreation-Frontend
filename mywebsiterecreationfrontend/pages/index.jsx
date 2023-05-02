@@ -1,3 +1,5 @@
+Home.pageTitle = 'Home'
+
 export default function Home() {
   return (
 

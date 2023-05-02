@@ -1,3 +1,5 @@
+ArticleCategoryAllQuickView.pageTitle = 'Article Category All Quick View'
+
 export default function ArticleCategoryAllQuickView() {
     return (
         <>
