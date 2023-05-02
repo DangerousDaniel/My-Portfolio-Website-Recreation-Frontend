@@ -18,18 +18,18 @@ export default function Footer() {
                     <div class="col l2 m3 s12">
                         <h5 class="white-text">Resources</h5>
                         <ul>
-                            <li><Link className="grey-text text-lighten-4" href="https://nextjs.org/">Next JS React Framework</Link></li>
-                            <li><Link className="grey-text text-lighten-4" href="https://materializecss.com/">Materialize CSS Framework</Link></li>
-                            <li><Link className="grey-text text-lighten-4" href="https://www.djangoproject.com/">Django Web Framework </Link></li>
-                            <li><Link className="grey-text text-lighten-4" href="https://www.django-rest-framework.org/">Django REST Framework</Link></li>
+                            <li><Link className="grey-text text-lighten-4" target="_blank" href="https://nextjs.org/">Next JS React Framework</Link></li>
+                            <li><Link className="grey-text text-lighten-4" target="_blank" href="https://materializecss.com/">Materialize CSS Framework</Link></li>
+                            <li><Link className="grey-text text-lighten-4" target="_blank" href="https://www.djangoproject.com/">Django Web Framework </Link></li>
+                            <li><Link className="grey-text text-lighten-4" target="_blank" href="https://www.django-rest-framework.org/">Django REST Framework</Link></li>
                         </ul>
                     </div>
                     <div className="col l2 m3 s12">
                         <h5 className="white-text">GitHub Repos</h5>
                         <ul>
-                            <li><Link className="grey-text text-lighten-4" href="https://github.com/DangerousDaniel/My-Website-Recreation-Frontend">Front End</Link></li>
-                            <li><Link className="grey-text text-lighten-4" href="https://github.com/DangerousDaniel/My-Portfolio-Website-Recreation-Backend">Back End</Link></li>
-                            <li><Link className="grey-text text-lighten-4" href="https://github.com/DangerousDaniel/My-Website-Recreation-Work-Examples">Work Examples</Link></li>
+                            <li><Link className="grey-text text-lighten-4" target="_blank" href="https://github.com/DangerousDaniel/My-Website-Recreation-Frontend">Front End</Link></li>
+                            <li><Link className="grey-text text-lighten-4" target="_blank" href="https://github.com/DangerousDaniel/My-Portfolio-Website-Recreation-Backend">Back End</Link></li>
+                            <li><Link className="grey-text text-lighten-4" target="_blank" href="https://github.com/DangerousDaniel/My-Website-Recreation-Work-Examples">Work Examples</Link></li>
                         </ul>
                     </div>
                 </div>
