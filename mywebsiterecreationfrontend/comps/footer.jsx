@@ -18,9 +18,9 @@ export default function Footer() {
                     <div class="col l2 m3 s12">
                         <h5 class="white-text">Resources</h5>
                         <ul>
-                            <li><Link className="grey-text text-lighten-4" href="https://nextjs.org/">Next JS Framework</Link></li>
+                            <li><Link className="grey-text text-lighten-4" href="https://nextjs.org/">Next JS React Framework</Link></li>
                             <li><Link className="grey-text text-lighten-4" href="https://materializecss.com/">Materialize CSS Framework</Link></li>
-                            <li><Link className="grey-text text-lighten-4" href="https://www.djangoproject.com/">Django Framework </Link></li>
+                            <li><Link className="grey-text text-lighten-4" href="https://www.djangoproject.com/">Django Web Framework </Link></li>
                             <li><Link className="grey-text text-lighten-4" href="https://www.django-rest-framework.org/">Django REST Framework</Link></li>
                         </ul>
                     </div>
