@@ -1,27 +1,13 @@
 Components
     Navbar
-        GET all category (Done)
-            gen the navigation from the GET Request
-                category
-                    id
-                    name
+       Static Data 
     
     Footer
-        Footer Information
-            GET all article by category 
-                display as article detail
-                    article
-                        Name    
-                        Pages
-                        resources
+        Static Data 
 Pages
     Home
         Who Am I
-            GET the article id for Who Am I
-                display as article detail
-                    article
-                        Name    
-                        Pages
+           Static Data 
 
     Latest Article
         GET all article quick view limit 4  
