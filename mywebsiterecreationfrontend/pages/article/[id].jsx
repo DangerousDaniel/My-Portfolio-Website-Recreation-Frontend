@@ -19,7 +19,7 @@ export default function ArticleDetail() {
                                 Once there, there is a cat oven and cook up the cake and you win!
                             </p>
                         </div>
-                        <div className="col s12"><Image src="/Screenshot 2022-03-25 150644.jpg" width={500} height={300} alt="Cat Chef Image 1"/>
+                        <div className="col s12"><img src="https://imgur.com/q0ueFd7.jpg" width={500} height={300} alt="Cat Chef Image 1"/>
                             <p>This is take in the middle of the level.</p></div>
                         <div className="col s12"><Image src="/Screenshot 2022-03-25 150916.jpg" width={500} height={300} alt="Cat Chef Image 2"/>
                             <p>This is take at end of the level.</p>
