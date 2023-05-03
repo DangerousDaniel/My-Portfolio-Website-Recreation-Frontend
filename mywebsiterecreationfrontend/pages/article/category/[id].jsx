@@ -19,7 +19,7 @@ export default function ArticleCategoryAllQuickView() {
                 I am convenient because I require little markup to use effectively.</p>
             </div>
             <div className="card-action">
-              <Link className="blue-text" href="#">Head to the Article</Link>
+              <Link className="blue-text" href="article/1">Head to the Article</Link>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function ArticleCategoryAllQuickView() {
                 I am convenient because I require little markup to use effectively.</p>
             </div>
             <div className="card-action">
-              <Link className="blue-text" href="#">Head to the Article</Link>
+              <Link className="blue-text" href="article/2">Head to the Article</Link>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function ArticleCategoryAllQuickView() {
                 I am convenient because I require little markup to use effectively.</p>
             </div>
             <div className="card-action">
-              <Link className="blue-text" href="#">Head to the Article</Link>
+              <Link className="blue-text" href="article/3">Head to the Article</Link>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function ArticleCategoryAllQuickView() {
                 I am convenient because I require little markup to use effectively.</p>
             </div>
             <div className="card-action">
-              <Link className="blue-text" href="#">Head to the Article</Link>
+              <Link className="blue-text" href="article/4">Head to the Article</Link>
             </div>
           </div>
         </div>
