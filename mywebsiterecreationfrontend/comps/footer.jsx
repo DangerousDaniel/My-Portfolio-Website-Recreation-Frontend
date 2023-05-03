@@ -12,7 +12,7 @@ export default function Footer() {
                         <ul>
                             <li><Link className="white-text"  href="#">danielcox996@gmail.com</Link></li>
                             <li><Link className="white-text"  href="#">902-818-8129</Link></li>
-                            <li><Link target="_blank" class="linkTag" href="https://www.linkedin.com/in/daniel-cox-b0320115b/"><Image src="/linkedinLogo.png" width={20} height={20} alt="Linkedin" /></Link></li>
+                            <li><Link target="_blank" href="https://www.linkedin.com/in/daniel-cox-b0320115b/"><Image src="/linkedinLogo.png" width={20} height={20} alt="Linkedin" /></Link></li>
                         </ul>
                     </div>
                     <div className="col l2 m3 s12">

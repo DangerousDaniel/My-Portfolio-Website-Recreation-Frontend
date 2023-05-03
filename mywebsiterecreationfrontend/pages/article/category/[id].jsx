@@ -5,7 +5,7 @@ ArticleCategoryAllQuickView.pageTitle = 'Article Category All Quick View'
 
 export default function ArticleCategoryAllQuickView() {
     return (
-        <div class="container">
+        <div className="container">
         <div className="row ">
         <h3 className="white-text">Articles Other</h3>
         <div className="col s12 m5 l3">
