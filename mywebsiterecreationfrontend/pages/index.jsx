@@ -31,7 +31,7 @@ export default function Home() {
               <Image src="/Monster Island 1.0 (1-7-2020) (Ben Topple).png" alt="Daniel Cox's Profile Picture" width={250} height={250} />
             </div>
             <div className="card-content">
-            <h4 className="">Vex Monsters Project 2 Demo</h4>
+            <h4>Vex Monsters Project 2 Demo</h4>
               <p>I am a very simple card. I am good at containing small bits of information.
                 I am convenient because I require little markup to use effectively.</p>
             </div>
@@ -46,7 +46,7 @@ export default function Home() {
               <Image src="/Screenshot 2022-03-25 150644.jpg" alt="Daniel Cox's Profile Picture" width={250} height={250} />
             </div>
             <div className="card-content">
-            <h4 className="">Cat Chef Showcase Game</h4>
+            <h4>Cat Chef Showcase Game</h4>
               <p>I am a very simple card. I am good at containing small bits of information.
                 I am convenient because I require little markup to use effectively.</p>
             </div>
@@ -62,7 +62,7 @@ export default function Home() {
               
             </div>
             <div className="card-content">
-            <h4 className="">PC Builds Showcase</h4>
+            <h4>PC Builds Showcase</h4>
               <p>I am a very simple card. I am good at containing small bits of information.
                 I am convenient because I require little markup to use effectively.</p>
             </div>
@@ -77,7 +77,7 @@ export default function Home() {
               <Image src="/SpellListReactVersion2022.jpg" alt="Daniel Cox's Profile Picture" width={250} height={250} />
             </div>
             <div className="card-content">
-            <h4 className="">DD Spell Recreation</h4>
+            <h4>DD Spell Recreation</h4>
               <p>I am a very simple card. I am good at containing small bits of information.
                 I am convenient because I require little markup to use effectively.</p>
             </div>
