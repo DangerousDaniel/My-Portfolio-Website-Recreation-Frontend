@@ -17,8 +17,8 @@ export default function NavBar() {
                 return res.json()
             })
             .then((data) => {
-                console.log(data)
-                setCategories(data)
+                console.log(data[0]['Categories'])
+                setCategories(data[0]['Categories'])
 
             })
     }, []);
