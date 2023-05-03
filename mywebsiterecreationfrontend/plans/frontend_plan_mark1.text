@@ -1,0 +1,57 @@
+Components
+    Navbar
+        GET all category 
+            gen the navigation from the GET Request
+                category
+                    id
+                    name
+    
+    Footer
+        Contact Me
+            GET the article id for Contact Me  
+                display as article detail
+                    article
+                        Name    
+                        Pages
+                        resources
+        Resources
+            GET the article id for Resources
+                display as article detail
+                    article
+                        resources
+            
+        GitHub Repos
+            GET the article id for GitHub Repos
+                display as article detail
+                    article
+                        resources
+    
+Pages
+    Home
+        Who Am I
+            GET the article id for Who Am I
+                display as article detail
+                    article
+                        Name    
+                        Pages
+
+    Latest Article
+        GET all article quick view limit 4  
+            article 
+                name
+                image_preview 
+                preview
+
+    Article By Category
+        GET all article quick view by category limit 10
+              article 
+                    name
+                    image_preview 
+                    preview
+    Article Detail
+        GET article by id
+            last-updated
+            created
+            name
+            page
+            resources
