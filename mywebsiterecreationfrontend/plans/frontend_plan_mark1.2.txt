@@ -1,31 +1,19 @@
 Components
     Navbar
-        GET all category 
+        GET all category (Done)
             gen the navigation from the GET Request
                 category
                     id
                     name
     
     Footer
-        Contact Me
-            GET the article id for Contact Me  
+        Footer Information
+            GET all article by category 
                 display as article detail
                     article
                         Name    
                         Pages
                         resources
-        Resources
-            GET the article id for Resources
-                display as article detail
-                    article
-                        resources
-            
-        GitHub Repos
-            GET the article id for GitHub Repos
-                display as article detail
-                    article
-                        resources
-    
 Pages
     Home
         Who Am I
