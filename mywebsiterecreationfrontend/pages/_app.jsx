@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   return (
-<>
+<div className="green darken-4">
       <Head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,6 +19,6 @@ export default function App({ Component, pageProps }) {
         </Layout>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       </div>
-      </>
+      </div>
   )
 }
