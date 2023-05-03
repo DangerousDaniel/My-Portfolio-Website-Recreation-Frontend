@@ -35,7 +35,7 @@ export default function NavBar() {
 
                         {categories && categories.map((category, index) => {
                             if (index >= 2) {
-                                return (<li ><Link href={`/article/category/${category.category_id}`}>{category.name}</Link></li>)
+                                return (<li key={category.category_id}><Link href={`/article/category/${category.category_id}`}>{category.name}</Link></li>)
                             }
                         }
                         )}
