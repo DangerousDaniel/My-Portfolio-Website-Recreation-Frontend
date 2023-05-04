@@ -3,6 +3,7 @@ import Link from "next/link"
 
 ArticleCategoryAllQuickView.pageTitle = 'Article Category All Quick View'
 
+
 export default function ArticleCategoryAllQuickView() {
     return (
         <div className="container">
@@ -73,3 +74,33 @@ export default function ArticleCategoryAllQuickView() {
       </div>
     )
 }
+
+// export async function getStaticPaths() {
+//   const response = await getLocalData()
+//   const data = await response.json()
+
+//   const thePaths = data[0].categories.map(category => {
+//     return { params: { id: category.category_id } }
+//   })
+
+//   console.log(thePaths)
+
+//   return {
+//     paths: thePaths,
+//     fallback: false
+//   }
+// }
+
+// export async function getStaticProps(context) {
+//   const response = await getLocalData()
+//   const data = await response.json()
+//   const articles = data[1].articles.filter(category => category.category_id === context.params.id)
+
+//   console.log()
+
+//   return {
+//     props: {
+//       articles
+//     }
+//   }
+// }

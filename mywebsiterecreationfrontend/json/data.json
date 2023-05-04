@@ -1,0 +1,153 @@
+[
+    {
+        "categories": [
+            {
+                "category_id": 1,
+                "name": "Monstrous Ent Game Demos"
+            },
+            {
+                "category_id": 2,
+                "name": "Website Application Projects"
+            }
+        ]
+    },
+    {
+        "articles": [
+            {
+                "articleData": {
+                    "article_id": 1,
+                    "name": "Test 1",
+                    "author": "Daniel Cox",
+                    "summary": "I am a test 1",
+                    "image_preview": "https://i.imgur.com/q0ueFd7.jpg",
+                    "category_id": 1,
+                    "date_created": "2023-05-03",
+                    "date_last_update": "2023-05-05"
+                },
+                "pageData": [
+                    {
+                        "page_id": 1,
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur placerat sodales. Praesent eu est et lorem imperdiet lacinia quis ac lacus. Praesent mattis ac arcu sit amet ornare. Cras sodales, quam in venenatis dignissim, ipsum lacus euismod magna, ornare mollis dui urna eu massa. Duis pellentesque, sapien ut faucibus suscipit, erat elit pulvinar augue, eget ullamcorper sapien nisi in nisi. Morbi ultricies ultricies dolor eu consectetur. In ultricies ex eu neque ultricies, ac venenatis erat efficitur. Sed sit amet diam ac est dapibus finibus. Cras pharetra iaculis nunc, id luctus diam euismod at. Maecenas vehicula est at dui mollis, tincidunt efficitur lorem mollis. In feugiat finibus urna ut feugiat.",
+                        "image_file": ""
+                    }
+                ],
+                "resourceData": [
+                    {
+                        "resource_id": 1,
+                        "name": "Test",
+                        "link": "https://daniel5143.imgur.com/all"
+                    }
+                ]
+            },
+            {
+                "articleData": {
+                    "article_id": 2,
+                    "name": "Test 2",
+                    "author": "Daniel Cox",
+                    "summary": "I am a test 2",
+                    "image_preview": "https://i.imgur.com/rXxwsTa.png",
+                    "category_id": 1,
+                    "date_created": "2023-05-03",
+                    "date_last_update": "2023-05-03"
+                },
+                "pageData": [
+                    {
+                        "page_id": 1,
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur placerat sodales. Praesent eu est et lorem imperdiet lacinia quis ac lacus. Praesent mattis ac arcu sit amet ornare. Cras sodales, quam in venenatis dignissim, ipsum lacus euismod magna, ornare mollis dui urna eu massa. Duis pellentesque, sapien ut faucibus suscipit, erat elit pulvinar augue, eget ullamcorper sapien nisi in nisi. Morbi ultricies ultricies dolor eu consectetur. In ultricies ex eu neque ultricies, ac venenatis erat efficitur. Sed sit amet diam ac est dapibus finibus. Cras pharetra iaculis nunc, id luctus diam euismod at. Maecenas vehicula est at dui mollis, tincidunt efficitur lorem mollis. In feugiat finibus urna ut feugiat.",
+                        "image_file": ""
+                    },
+                    {
+                        "page_id": 2,
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur placerat sodales. Praesent eu est et lorem imperdiet lacinia quis ac lacus. Praesent mattis ac arcu sit amet ornare. Cras sodales, quam in venenatis dignissim, ipsum lacus euismod magna, ornare mollis dui urna eu massa. Duis pellentesque, sapien ut faucibus suscipit, erat elit pulvinar augue, eget ullamcorper sapien nisi in nisi. Morbi ultricies ultricies dolor eu consectetur. In ultricies ex eu neque ultricies, ac venenatis erat efficitur. Sed sit amet diam ac est dapibus finibus. Cras pharetra iaculis nunc, id luctus diam euismod at. Maecenas vehicula est at dui mollis, tincidunt efficitur lorem mollis. In feugiat finibus urna ut feugiat.",
+                        "image_file": "https://i.imgur.com/rXxwsTa.png"
+                    }
+                ],
+                "resourceData": [
+                    {
+                        "resource_id": 1,
+                        "name": "Test 1",
+                        "link": "https://daniel5143.imgur.com/all"
+                    },
+                    {
+                        "resource_id": 2,
+                        "name": "Test 2",
+                        "link": "https://daniel5143.imgur.com/all"
+                    }
+                ]
+            },
+            {
+                "articleData": {
+                    "article_id": 3,
+                    "name": "Test 3",
+                    "author": "Daniel Cox",
+                    "summary": "I am a test 3",
+                    "image_preview": "https://i.imgur.com/rXxwsTa.png",
+                    "category_id": 2,
+                    "date_created": "2023-05-03",
+                    "date_last_update": "2023-05-03"
+                },
+                "pageData": [
+                    {
+                        "page_id": 1,
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur placerat sodales. Praesent eu est et lorem imperdiet lacinia quis ac lacus. Praesent mattis ac arcu sit amet ornare. Cras sodales, quam in venenatis dignissim, ipsum lacus euismod magna, ornare mollis dui urna eu massa. Duis pellentesque, sapien ut faucibus suscipit, erat elit pulvinar augue, eget ullamcorper sapien nisi in nisi. Morbi ultricies ultricies dolor eu consectetur. In ultricies ex eu neque ultricies, ac venenatis erat efficitur. Sed sit amet diam ac est dapibus finibus. Cras pharetra iaculis nunc, id luctus diam euismod at. Maecenas vehicula est at dui mollis, tincidunt efficitur lorem mollis. In feugiat finibus urna ut feugiat.",
+                        "image_file": ""
+                    },
+                    {
+                        "page_id": 2,
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur placerat sodales. Praesent eu est et lorem imperdiet lacinia quis ac lacus. Praesent mattis ac arcu sit amet ornare. Cras sodales, quam in venenatis dignissim, ipsum lacus euismod magna, ornare mollis dui urna eu massa. Duis pellentesque, sapien ut faucibus suscipit, erat elit pulvinar augue, eget ullamcorper sapien nisi in nisi. Morbi ultricies ultricies dolor eu consectetur. In ultricies ex eu neque ultricies, ac venenatis erat efficitur. Sed sit amet diam ac est dapibus finibus. Cras pharetra iaculis nunc, id luctus diam euismod at. Maecenas vehicula est at dui mollis, tincidunt efficitur lorem mollis. In feugiat finibus urna ut feugiat.",
+                        "image_file": "https://i.imgur.com/rXxwsTa.png"
+                    }
+                ],
+                "resourceData": [
+                    {
+                        "resource_id": 1,
+                        "name": "Test 1",
+                        "link": "https://daniel5143.imgur.com/all"
+                    },
+                    {
+                        "resource_id": 2,
+                        "name": "Test 2",
+                        "link": "https://daniel5143.imgur.com/all"
+                    }
+                ]
+            },
+            {
+                "articleData": {
+                    "article_id": 4,
+                    "name": "Test 4",
+                    "author": "Daniel Cox",
+                    "summary": "I am a test 4",
+                    "image_preview": "https://i.imgur.com/rXxwsTa.png",
+                    "category_id": 2,
+                    "date_created": "2023-05-03",
+                    "date_last_update": "2023-05-03"
+                },
+                "pageData": [
+                    {
+                        "page_id": 1,
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur placerat sodales. Praesent eu est et lorem imperdiet lacinia quis ac lacus. Praesent mattis ac arcu sit amet ornare. Cras sodales, quam in venenatis dignissim, ipsum lacus euismod magna, ornare mollis dui urna eu massa. Duis pellentesque, sapien ut faucibus suscipit, erat elit pulvinar augue, eget ullamcorper sapien nisi in nisi. Morbi ultricies ultricies dolor eu consectetur. In ultricies ex eu neque ultricies, ac venenatis erat efficitur. Sed sit amet diam ac est dapibus finibus. Cras pharetra iaculis nunc, id luctus diam euismod at. Maecenas vehicula est at dui mollis, tincidunt efficitur lorem mollis. In feugiat finibus urna ut feugiat.",
+                        "image_file": ""
+                    },
+                    {
+                        "page_id": 2,
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur placerat sodales. Praesent eu est et lorem imperdiet lacinia quis ac lacus. Praesent mattis ac arcu sit amet ornare. Cras sodales, quam in venenatis dignissim, ipsum lacus euismod magna, ornare mollis dui urna eu massa. Duis pellentesque, sapien ut faucibus suscipit, erat elit pulvinar augue, eget ullamcorper sapien nisi in nisi. Morbi ultricies ultricies dolor eu consectetur. In ultricies ex eu neque ultricies, ac venenatis erat efficitur. Sed sit amet diam ac est dapibus finibus. Cras pharetra iaculis nunc, id luctus diam euismod at. Maecenas vehicula est at dui mollis, tincidunt efficitur lorem mollis. In feugiat finibus urna ut feugiat.",
+                        "image_file": "https://i.imgur.com/rXxwsTa.png"
+                    }
+                ],
+                "resourceData": [
+                    {
+                        "resource_id": 1,
+                        "name": "Test 1",
+                        "link": "https://daniel5143.imgur.com/all"
+                    },
+                    {
+                        "resource_id": 2,
+                        "name": "Test 2",
+                        "link": "https://daniel5143.imgur.com/all"
+                    }
+                ]
+            }
+        ]
+    }
+]
+

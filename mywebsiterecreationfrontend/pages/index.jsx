@@ -5,11 +5,11 @@ Home.pageTitle = 'Home'
 import { getLocalData } from "../comps/localData"
 
 export async function getStaticProps() {
-  const localData = await getLocalData('/json/data_all_quick_view.json')
+  const localData = await getLocalData()
 
   return {
     props: { 
-      localData: localData[0].Articles 
+      localData: localData[1].articles 
     }
   }
 }
@@ -41,17 +41,17 @@ export default function Home({ localData }) {
         
         {localData.map((data, index) => {
           return (
-            <div key={data.article_id} className="col s12 m5 l3">
+            <div key={data.articleData.article_id} className="col s12 m5 l3">
             <div className="card">
               <div className="card-image">
-                <img src={`${data.image_preview}`} alt="Daniel Cox's Profile Picture" width="250" height="250" />
+                <img src={`${data.articleData.image_preview}`} alt="Daniel Cox's Profile Picture" width="250" height="250" />
               </div>
               <div className="card-content">
-                <h4>{data.name}</h4>
-                <p>{data.summary}</p>
+                <h4>{data.articleData.name}</h4>
+                <p>{data.articleData.summary}</p>
               </div>
               <div className="card-action">
-                <Link className="blue-text" href={`article/${data.article_id}`}>Head to the Article</Link>
+                <Link className="blue-text" href={`article/${data.articleData.article_id}`}>Head to the Article</Link>
               </div>
             </div>
           </div>
