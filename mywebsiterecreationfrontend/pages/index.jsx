@@ -8,7 +8,9 @@ export async function getStaticProps() {
   const localData = await getLocalData('/json/data_all_quick_view.json')
 
   return {
-    props: { localData }
+    props: { 
+      localData: localData[0].Articles 
+    }
   }
 }
 
