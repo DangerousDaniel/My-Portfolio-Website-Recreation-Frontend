@@ -41,7 +41,7 @@ export default function Home({ localData }) {
         
         {localData.map((data, index) => {
           return (
-            <div className="col s12 m5 l3">
+            <div key={data.article_id} className="col s12 m5 l3">
             <div className="card">
               <div className="card-image">
                 <img src={`${data.image_preview}`} alt="Daniel Cox's Profile Picture" width="250" height="250" />
