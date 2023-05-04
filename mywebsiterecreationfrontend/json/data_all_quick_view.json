@@ -1,0 +1,22 @@
+[
+    {
+        "article_id": 1,
+        "name": "Test 1",
+        "author": "Daniel Cox",
+        "summary": "I am a test",
+        "image_preview": "https://i.imgur.com/q0ueFd7.jpg",
+        "category_id": 1,
+        "date_created": "2023-05-03",
+        "date_last_update": "2023-05-05"
+    },
+    {
+        "article_id": 2,
+        "name": "Test 2",
+        "author": "Daniel Cox",
+        "summary": "Test 2",
+        "image_preview": "https://i.imgur.com/rXxwsTa.png",
+        "category_id": 1,
+        "date_created": "2023-05-03",
+        "date_last_update": "2023-05-03"
+    }
+]
