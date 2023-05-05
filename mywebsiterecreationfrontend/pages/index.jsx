@@ -44,7 +44,7 @@ export default function HomePage({ articles }) {
             <div key={article.articleData.article_id} className="col s12 m5 l3">
             <div className="card">
               <div className="card-image">
-                <img src={`${article.articleData.image_preview}`} alt="Daniel Cox's Profile Picture" width="250" height="250" />
+                <img src={`${article.articleData.image_preview}`} alt={`Article Image Preview ${article.articleData.article_id}`} width="250" height="250" />
               </div>
               <div className="card-content">
                 <h4>{article.articleData.name}</h4>
