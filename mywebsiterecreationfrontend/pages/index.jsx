@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-Home.pageTitle = 'Home'
+HomePage.pageTitle = 'Home'
 import { getLocalData } from "../comps/localData"
 
 export async function getStaticProps() {
@@ -14,7 +14,7 @@ export async function getStaticProps() {
 }
 
 
-export default function Home({ articles }) {
+export default function HomePage({ articles }) {
   console.log(articles)
 
   return (

@@ -1,10 +1,10 @@
 import Link from "next/link"
 import { getLocalData } from "../../../comps/localData"
 
-ArticleCategoryAllQuickView.pageTitle = 'Article Category All Quick View'
+ArticleCategoryPage.pageTitle = 'Article Category Page'
 
 
-export default function ArticleCategoryAllQuickView({ articles }) {
+export default function ArticleCategoryPage({ articles }) {
   console.log(articles)
 
   return (
