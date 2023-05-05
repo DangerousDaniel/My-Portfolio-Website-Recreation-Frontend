@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from 'next/image'
 
 Home.pageTitle = 'Home'
 import { getLocalData } from "../comps/localData"
@@ -9,18 +8,19 @@ export async function getStaticProps() {
 
   return {
     props: { 
-      localData: localData[1].articles 
+      articles: localData[1].articles
     }
   }
 }
 
 
-export default function Home({ localData }) {
-  console.log(localData)
+export default function Home({ articles }) {
+  console.log(articles)
+
   return (
     <div className="container">
       <div className="row">
-        <div className="col s12 m6 l3"><Image src="/myProfilePicture2023.jpg" alt="Daniel Cox's Profile Picture" width={250} height={300} /></div>
+        <div className="col s12 m6 l3"><img src="/myProfilePicture2023.jpg" alt="Daniel Cox's Profile Picture" width="250" height="300" /></div>
         <div className="col s12 m6 l5 white-text">
           <h2>Who Am I</h2>
           <p>
@@ -39,25 +39,24 @@ export default function Home({ localData }) {
       <div className="row ">
         <h3 className="white-text">Latest Articles</h3>
         
-        {localData.map((data, index) => {
+        {articles.map((article, index) => {
           return (
-            <div key={data.articleData.article_id} className="col s12 m5 l3">
+            <div key={article.articleData.article_id} className="col s12 m5 l3">
             <div className="card">
               <div className="card-image">
-                <img src={`${data.articleData.image_preview}`} alt="Daniel Cox's Profile Picture" width="250" height="250" />
+                <img src={`${article.articleData.image_preview}`} alt="Daniel Cox's Profile Picture" width="250" height="250" />
               </div>
               <div className="card-content">
-                <h4>{data.articleData.name}</h4>
-                <p>{data.articleData.summary}</p>
+                <h4>{article.articleData.name}</h4>
+                <p>{article.articleData.summary}</p>
               </div>
               <div className="card-action">
-                <Link className="blue-text" href={`article/${data.articleData.article_id}`}>Head to the Article</Link>
+                <Link className="blue-text" href={`article/${article.articleData.article_id}`}>Head to the Article</Link>
               </div>
             </div>
           </div>
           )
         })}
-
       </div>
     </div>
   )
