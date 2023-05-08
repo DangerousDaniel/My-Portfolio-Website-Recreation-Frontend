@@ -1,10 +1,13 @@
 import Link from "next/link"
 import { getLocalData } from "../../comps/localData"
-
-ArticleDetail.pageTitle = 'Article Detail'
+import { useEffect } from "react";
 
 export default function ArticleDetail({ article }) {
-    console.log(article)
+    
+    useEffect(() => {
+        document.title = `DangerousDan996 | ${article.articleData.name}`;
+      }, []);
+    
 
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 

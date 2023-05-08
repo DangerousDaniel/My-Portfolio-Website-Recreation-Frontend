@@ -1,12 +1,12 @@
 import Link from "next/link"
 import { getLocalData } from "../../../comps/localData"
+import { useEffect } from "react";
 
-ArticleCategoryPage.pageTitle = 'Article Category Page'
+export default function ArticleCategoryPage({ articles, category }) {
 
-
-export default function ArticleCategoryPage({ articles }) {
-
-  console.log(articles)
+  useEffect(() => {
+    document.title = `DangerousDan996 | ${category.name}`;
+  }, []);
 
   return (
     <div className="container">
@@ -53,10 +53,12 @@ export async function getStaticProps(context) {
   const localData = await getLocalData()
 
   const articles = localData[1].articles.filter(article => article.articleData.category_id.toString() === context.params.id)
+  const category = localData[0].categories.filter(category => category.category_id.toString() === context.params.id)
 
   return {
     props: {
-      articles
+      articles,
+      category: category[0]
     }
   }
 }

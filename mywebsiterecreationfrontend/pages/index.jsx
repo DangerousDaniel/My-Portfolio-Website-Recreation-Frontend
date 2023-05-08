@@ -1,21 +1,12 @@
 import Link from "next/link"
-
-HomePage.pageTitle = 'Home'
 import { getLocalData } from "../comps/localData"
-
-export async function getStaticProps() {
-  const localData = await getLocalData()
-
-  return {
-    props: { 
-      articles: localData[1].articles
-    }
-  }
-}
-
+import { useEffect } from "react";
 
 export default function HomePage({ articles }) {
-  console.log(articles)
+  
+  useEffect(() => {
+    document.title = `DangerousDan996 | Home`;
+  }, []);
 
   return (
     <div className="container">
@@ -60,6 +51,16 @@ export default function HomePage({ articles }) {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const localData = await getLocalData()
+
+  return {
+    props: { 
+      articles: localData[1].articles
+    }
+  }
 }
 
 
