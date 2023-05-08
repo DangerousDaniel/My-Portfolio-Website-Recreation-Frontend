@@ -1,11 +1,11 @@
 Components
-    Navbar
+    Navbar (Done)
        Static Data 
     
-    Footer
+    Footer (Done)
         Static Data 
 Pages
-    Home
+    Home (Done)
         Who Am I
            Static Data 
 
