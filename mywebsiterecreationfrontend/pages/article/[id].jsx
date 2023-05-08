@@ -1,4 +1,13 @@
-import Link from "next/link"
+/*
+    Project Name: My Portfolio Website Recreation
+    Authors: Daniel Cox
+    Created Date: May 1, 2023
+    Last Updated: May 8, 2023
+    Description: This is the page is for article details.
+    Notes:
+    Resources: 
+*/
+
 import { getLocalData } from "../../comps/localData"
 import { useEffect } from "react";
 
@@ -8,14 +17,13 @@ export default function ArticleDetail({ article }) {
         document.title = `DangerousDan996 | ${article.articleData.name}`;
       }, []);
     
-
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
     let createdDate = new Date(article.articleData.date_created)
     let lastUpdateDate = new Date(article.articleData.date_last_update)
 
     return (
-        <div className="container white-text">
+        <div key={article.articleData.article_id} className="container white-text">
             <div className="row">
                 <div className="col s12">
                     <div className="row">
@@ -42,8 +50,8 @@ export default function ArticleDetail({ article }) {
 
                         {article.resources.map((resource, index) => {
                             return (
-                                <div className="col s12">
-                                    <h5><Link className="blue-text" target="_blank" href={resource.link}>{resource.name}</Link></h5>
+                                <div key={resource.resource_id} className="col s12">
+                                    <h5><a className="blue-text" target="_blank" href={resource.link}>{resource.name}</a></h5>
                                 </div>
                             )
                         })}

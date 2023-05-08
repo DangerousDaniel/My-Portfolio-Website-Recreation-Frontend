@@ -1,6 +1,16 @@
-import Link from "next/link"
+/*
+    Project Name: My Portfolio Website Recreation
+    Authors: Daniel Cox
+    Created Date: May 1, 2023
+    Last Updated: May 8, 2023
+    Description: This is the page is for article category.
+    Notes:
+    Resources: 
+*/
+
 import { getLocalData } from "../../../comps/localData"
 import { useEffect } from "react";
+import ArticleCard from "../../../comps/articleCard";
 
 export default function ArticleCategoryPage({ articles, category }) {
 
@@ -14,21 +24,7 @@ export default function ArticleCategoryPage({ articles, category }) {
         <h3 className="white-text">Articles Other</h3>
         {articles.map((article, index) => {
           return (
-            <div key={article.articleData.article_id} className="col s12 m5 l3">
-              <div className="card">
-                <div className="card-image">
-                  <img src={`${article.articleData.image_preview}`} alt={`Article Image Preview ${article.articleData.article_id}`} width="250" height="250" />
-                </div>
-                <div className="card-content">
-                  <h4>{article.articleData.name}</h4>
-                  <p>{article.articleData.summary}</p>
-                </div>
-                <div className="card-action">
-                  {console.log(`article/${article.articleData.article_id}`)}
-                  <Link className="blue-text" href={`../${article.articleData.article_id}`} replace={true}>Head to the Article</Link>
-                </div>
-              </div>
-            </div>
+            <ArticleCard key={article.articleData.article_id} data={article}></ArticleCard>
           )
         })}
       </div>
