@@ -2,13 +2,13 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 8, 2023
+    Last Updated: May 26, 2023
     Description: This is the page is for article details.
     Notes:
     Resources: 
 */
 
-import { getLocalData } from "../../comps/localData"
+import { getLocalData } from "../../components/localData/localData"
 import { useEffect } from "react";
 
 export default function ArticleDetail({ article }) {
@@ -63,7 +63,7 @@ export default function ArticleDetail({ article }) {
 }
 
 export async function getStaticPaths() {
-    const localData = await getLocalData()
+    const localData = await getLocalData('articleData.json')
 
     const thePaths = localData[1].articles.map(article => {
         return { params: { id: article.articleData.article_id.toString() } }
@@ -76,7 +76,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const localData = await getLocalData()
+    const localData = await getLocalData('articleData.json')
 
     const article = localData[1].articles.filter(article => article.articleData.article_id.toString() === context.params.id)
 

@@ -8,9 +8,9 @@
     Resources: 
 */
 
-import { getLocalData } from "../../../comps/localData"
+import { getLocalData } from "../../../components/localData/localData"
 import { useEffect } from "react";
-import ArticleCard from "../../../comps/articleCard";
+import ArticleCard from "../../../components/article/articleCard";
 
 export default function ArticleCategoryPage({ articles, category }) {
 
@@ -33,7 +33,7 @@ export default function ArticleCategoryPage({ articles, category }) {
 }
 
 export async function getStaticPaths() {
-  const localData = await getLocalData()
+  const localData = await getLocalData('articleData.json')
 
   const thePaths = localData[0].categories.map(category => {
     return { params: { id: category.category_id.toString() } }
@@ -46,7 +46,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const localData = await getLocalData()
+  const localData = await getLocalData('articleData.json')
 
   const articles = localData[1].articles.filter(article => article.articleData.category_id.toString() === context.params.id)
   const category = localData[0].categories.filter(category => category.category_id.toString() === context.params.id)

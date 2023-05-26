@@ -8,9 +8,9 @@
     Resources: 
 */
 
-import { getLocalData } from "../comps/localData"
-import { useEffect } from "react";
-import ArticleCard from "../comps/articleCard";
+import { getLocalData } from "../components/localData/localData"
+import { useEffect } from "react"
+import ArticleCard from "../components/article/articleCard"
 
 export default function HomePage({ articles }) {
   
@@ -51,7 +51,7 @@ export default function HomePage({ articles }) {
 }
 
 export async function getStaticProps() {
-  const localData = await getLocalData()
+  const localData = await getLocalData('articleData.json')
 
   return {
     props: { 

@@ -8,7 +8,7 @@
     Resources: 
 */
 
-import Layout from "../comps/layout";
+import Layout from "../components/layout/layout";
 import Head from "next/head";
 import '../styles/app.css';
 

@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 8, 2023
-    Last Updated: May 8, 2023
+    Last Updated: May 26, 2023
     Description: This is the components is for article card.
     Notes:
     Resources: 
@@ -23,7 +23,7 @@ export default function ArticleCard({ data }) {
                     <p>{data.articleData.summary}</p>
                 </div>
                 <div className="card-action">
-                    <Link className="blue-text" href={`../../article/${data.articleData.article_id}`}>Head to the Article</Link>
+                    <Link className="blue-text" href={`../../article/${data.articleData.article_id}`}>Learn More!</Link>
                 </div>
             </div>
         </div>
