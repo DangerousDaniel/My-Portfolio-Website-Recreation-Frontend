@@ -23,9 +23,8 @@ export default function NavBar() {
                     <ul className="right hide-on-med-and-down">
                         <li className={router.asPath == "/" ? "active" : ""}><Link href="/">Home</Link></li>
                         <li className={router.asPath == "/article/category/1" ? "active" : ""}><Link href="/article/category/1">Monstrous Ent Game Demos</Link></li>
-                        <li className={router.asPath == "/article/category/2" ? "active" : ""}  ><Link href="/article/category/2">Website Application Projects</Link></li>
-                        <li className={router.asPath == "/article/category/3" ? "active" : ""}><Link href="/article/category/3">Resume</Link></li>
-                        <li className={router.asPath == "/article/category/4" ? "active" : ""}><Link href="/article/category/4">Other</Link></li>
+                        <li className={router.asPath == "/article/category/2" ? "active" : ""}><Link href="/article/category/2">Other</Link></li>
+                        <li className={router.asPath == "#" ? "active" : ""}><Link href="#">Resume</Link></li>
                     </ul>
                 </div>
             </div>

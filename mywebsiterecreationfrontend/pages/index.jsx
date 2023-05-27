@@ -55,7 +55,7 @@ export async function getStaticProps() {
 
   return {
     props: { 
-      articles: localData[1].articles
+      articles: localData[0].articles
     }
   }
 }
