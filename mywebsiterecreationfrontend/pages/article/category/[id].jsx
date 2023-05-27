@@ -2,8 +2,8 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 8, 2023
-    Description: This is the page is for article category.
+    Last Updated: May 27, 2023
+    Description: This is the page for article category.
     Notes:
     Resources: 
 */
@@ -23,11 +23,10 @@ export default function ArticleCategoryPage({ articles, category }) {
       <div className="row ">
         {articles.map((article, index) => {
           return (
-
-            <>
+            <div key={article.articleData.article_id}>
               <h3 className="white-text">{category.name}</h3>
-              <ArticleCard key={article.articleData.article_id} data={article}></ArticleCard>
-            </>
+              <ArticleCard data={article}></ArticleCard>
+              </div>
           )
         })}
       </div>

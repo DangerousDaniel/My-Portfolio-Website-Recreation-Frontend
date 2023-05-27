@@ -3,7 +3,7 @@
     Authors: Daniel Cox
     Created Date: May 1, 2023
     Last Updated: May 27, 2023
-    Description: This is the components for displaying footer info details.
+    Description: This is the component for displaying footer info details.
     Notes:
     Resources: 
 */
@@ -14,7 +14,7 @@ export default function FooterInfoDetail({ footerInfoData }) {
             <h5 >{footerInfoData.name}</h5>
             {footerInfoData.paragraphs.map((paragraph, index) => {
                 return (
-                    < p key={paragraph.paragraph_id}>
+                    <p key={paragraph.paragraph_id}>
                         {paragraph.description}
                     </p>
                 )

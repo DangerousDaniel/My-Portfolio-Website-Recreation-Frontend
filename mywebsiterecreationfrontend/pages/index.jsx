@@ -2,8 +2,8 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 26, 2023
-    Description: This is the page is for home.
+    Last Updated: May 27, 2023
+    Description: This is the page for home.
     Notes:
     Resources: 
 */

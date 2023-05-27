@@ -2,8 +2,8 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 26, 2023
-    Description: This is the page is for article details.
+    Last Updated: May 27, 2023
+    Description: This is the page for article details.
     Notes:
     Resources: 
 */
@@ -52,7 +52,7 @@ export default function ArticleDetailPage({ article }) {
 
                                     {page_context.video &&
                                         <div key={page_context.video.video_id} className="col s12">
-                                            <iframe width={853} height={480} src={`${page_context.video.link}`} frameBorder="0" allowfullScreen></iframe>
+                                            <iframe width={853} height={480} src={`${page_context.video.link}`} frameBorder="0" allowFullScreen></iframe>
                                         </div>
                                     }
 

@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 8, 2023
+    Last Updated: May 27, 2023
     Description: This class is the root of the app.
     Notes:
     Resources: 
@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" type="image/x-icon" href="/my_youTube_gaming_logo_2020_v2.2.png"></link>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <title> DangerousDan996 | </title>
+        <title> DangerousDan996 | Default Title</title>
       </Head>
 
       <div>

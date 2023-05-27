@@ -3,7 +3,7 @@
     Authors: Daniel Cox
     Created Date: May 1, 2023
     Last Updated: May 27, 2023
-    Description: This is the components is for navbar.
+    Description: This is the component for the navbar.
     Notes:
     Resources: 
 */
@@ -18,7 +18,7 @@ export default function NavBar() {
         <nav className="blue-grey darken-3">
             <div className="nav-wrapper">
                 <div className="row">
-                    <div className="col"><Link href="/"><img src="/my_youTube_gaming_logo_2020_v2.2.png" alt="Picture of the author" width={63} height={63} /></Link></div>
+                    <div className="col"><Link href="/"><img src="/images/my_youtube_gaming_logo_2020_v2.2.png" alt="Picture of the author" width={63} height={63} /></Link></div>
                     <div className="col"><Link href="/" className="brand-logo">DangerousDan996 | Daniel Cox</Link></div>
                     <ul className="right hide-on-med-and-down">
                         <li className={router.asPath == "/" ? "active" : ""}><Link href="/">Home</Link></li>
