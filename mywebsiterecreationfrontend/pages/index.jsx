@@ -11,7 +11,7 @@
 import { getLocalData } from "../components/localData/localData"
 import { useEffect } from "react"
 import ArticleCard from "../components/article/articleCard"
-import AboutData from "../components/about/aboutData";
+import AboutDetail from "../components/about/aboutDetail";
 
 export default function HomePage({ articles, aboutMes }) {
 
@@ -21,7 +21,7 @@ export default function HomePage({ articles, aboutMes }) {
 
   return (
     <div className="container">
-      <AboutData AboutDataJson={aboutMes[0]}></AboutData>
+      <AboutDetail aboutData={aboutMes[0]}></AboutDetail>
       <div className="row ">
         <h3 className="white-text">Latest Articles</h3>
 

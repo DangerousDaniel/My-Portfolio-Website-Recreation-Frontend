@@ -11,7 +11,7 @@
 import { getLocalData } from "../../components/localData/localData"
 import { useEffect } from "react";
 
-export default function ArticleDetail({ article }) {
+export default function ArticleDetailPage({ article }) {
 
     useEffect(() => {
         document.title = `DangerousDan996 | ${article.articleData.name}`;
@@ -51,7 +51,7 @@ export default function ArticleDetail({ article }) {
                                     }
 
                                     {page_context.video &&
-                                        <div key={page_context.video.video_id}>
+                                        <div key={page_context.video.video_id} className="col s12">
                                             <iframe width={853} height={480} src={`${page_context.video.link}`} frameBorder="0" allowfullScreen></iframe>
                                         </div>
                                     }

@@ -9,10 +9,10 @@
 */
 
 
-export default function AboutData({ AboutDataJson }) {
+export default function AboutDetail({ aboutData }) {
     return (
-        <div key={AboutDataJson.about_me_id} className="row">
-            {AboutDataJson.images.map((image, index) => {
+        <div key={aboutData.about_me_id} className="row">
+            {aboutData.images.map((image, index) => {
                 return (
                     <div key={image.image_id} className="col s12 l3"><img src={`${image.filePath}`} alt={`${image.name}`} width={250} height={300} /></div>
                 )
@@ -20,7 +20,7 @@ export default function AboutData({ AboutDataJson }) {
 
             <div className="col s12 l6 white-text">
                 <h2>About Me</h2>
-                {AboutDataJson.paragraphs.map((paragraph, index) => {
+                {aboutData.paragraphs.map((paragraph, index) => {
                     return (
                         <p key={paragraph.paragraph_id}>
                             {paragraph.description}
