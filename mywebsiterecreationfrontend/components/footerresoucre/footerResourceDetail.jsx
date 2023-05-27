@@ -3,7 +3,7 @@
     Authors: Daniel Cox
     Created Date: May 1, 2023
     Last Updated: May 27, 2023
-    Description: This is the components is for footer.
+    Description: This is the components for displaying footer resource details.
     Notes:
     Resources: 
 */
