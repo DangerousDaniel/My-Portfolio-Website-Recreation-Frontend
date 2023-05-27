@@ -1,27 +1,28 @@
-import Link from "next/link"
+/*
+    Project Name: My Portfolio Website Recreation
+    Authors: Daniel Cox
+    Created Date: May 1, 2023
+    Last Updated: May 8, 2023
+    Description: This is the page is for home.
+    Notes:
+    Resources: 
+*/
 
-HomePage.pageTitle = 'Home'
 import { getLocalData } from "../comps/localData"
-
-export async function getStaticProps() {
-  const localData = await getLocalData()
-
-  return {
-    props: { 
-      articles: localData[1].articles
-    }
-  }
-}
-
+import { useEffect } from "react";
+import ArticleCard from "../comps/articleCard";
 
 export default function HomePage({ articles }) {
-  console.log(articles)
+  
+  useEffect(() => {
+    document.title = `DangerousDan996 | Home`;
+  }, []);
 
   return (
     <div className="container">
       <div className="row">
-        <div className="col s12 m6 l3"><img src="/myProfilePicture2023.jpg" alt="Daniel Cox's Profile Picture" width="250" height="300" /></div>
-        <div className="col s12 m6 l5 white-text">
+        <div className="col s12 l3"><img src="/myProfilePicture2023.jpg" alt="Daniel Cox's Profile Picture" width="250" height="300" /></div>
+        <div className="col s12 l5 white-text">
           <h2>Who Am I</h2>
           <p>
             I graduated from NSCC IT Programming (Class of 2020).
@@ -41,25 +42,22 @@ export default function HomePage({ articles }) {
         
         {articles.map((article, index) => {
           return (
-            <div key={article.articleData.article_id} className="col s12 m5 l3">
-            <div className="card">
-              <div className="card-image">
-                <img src={`${article.articleData.image_preview}`} alt={`Article Image Preview ${article.articleData.article_id}`} width="250" height="250" />
-              </div>
-              <div className="card-content">
-                <h4>{article.articleData.name}</h4>
-                <p>{article.articleData.summary}</p>
-              </div>
-              <div className="card-action">
-                <Link className="blue-text" href={`article/${article.articleData.article_id}`}>Head to the Article</Link>
-              </div>
-            </div>
-          </div>
+            <ArticleCard key={article.articleData.article_id} data={article}></ArticleCard>
           )
         })}
       </div>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const localData = await getLocalData()
+
+  return {
+    props: { 
+      articles: localData[1].articles
+    }
+  }
 }
 
 
