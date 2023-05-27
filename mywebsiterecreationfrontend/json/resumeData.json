@@ -4,13 +4,13 @@
             {
                 "resume_id": 1,
                 "name": "Daniel Cox IT Resume",
-                "filePath": "https://drive.google.com/file/d/15C9VFiRrJofcLrwkfhHuTCYtdl6hVWP1/view?usp=sharing",
+                "filePath": "../../DanielCoxITResume.pdf",
                 "resources": [
                     {
                         "resource_id": 1,
                         "name": "Daniel Cox IT Resume PDF Link",
                         "description": "PDF HERE",
-                        "link": "#"
+                        "link": "https://github.com/DangerousDaniel/My-Portfolio-Website-Recreation-Frontend/blob/12-re-work-local-data-based-on-backed-re-work-database/mywebsiterecreationfrontend/public/DanielCoxITResume.pdf"
                     }
                 ]
             }

@@ -1,6 +1,21 @@
+/*
+    Project Name: My Portfolio Website Recreation
+    Authors: Daniel Cox
+    Created Date: May 27, 2023
+    Last Updated: May 27, 2023
+    Description: This is the page is for my resume.
+    Notes:
+    Resources: 
+*/
+
 import { getLocalData } from "../../components/localData/localData"
+import { useEffect } from "react";
 
 export default function ResumeDetailPage({ resume }) {
+    useEffect(() => {
+        document.title = `DangerousDan996 | Resume`;
+    }, []);
+
     return (
         <div key={resume.resume_id} className="container white-text">
             <div className="row">
@@ -10,13 +25,7 @@ export default function ResumeDetailPage({ resume }) {
                             <h3>Resume</h3>
                         </div>
                         <div className="col s12">
-                           <object 
-                            type="application/pdf"
-                            data={`${resume.filePath}`}
-                            width={600}
-                            height={700}
-                           >
-                           </object>
+                            <iframe width={1000} height={2000} src={`${resume.filePath}`} frameBorder="0" allowFullScreen></iframe>
                         </div>
                         {resume.resources.map((resource, index) => {
                             return (
