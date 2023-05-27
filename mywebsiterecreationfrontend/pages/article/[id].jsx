@@ -61,7 +61,13 @@ export default function ArticleDetailPage({ article }) {
                                             {page_context.resources.map((resource, index) => {
                                                 return (
                                                     <div key={resource.resource_id} className="col s12">
-                                                        <h5><a className="blue-text" target="_blank" href={resource.link}>{resource.name}</a></h5>
+                                                        <h5>
+                                                            <a className="blue-text" target="_blank" href={resource.link}>{resource.description}
+                                                                {resource.image_name &&
+                                                                    <img src={resource.image_link} width={20} height={20} alt={resource.image_name} />
+                                                                }
+                                                            </a>
+                                                        </h5>
                                                     </div>
                                                 )
                                             })
@@ -71,14 +77,6 @@ export default function ArticleDetailPage({ article }) {
                                 </div>
                             )
                         })}
-
-                        {/* {article.pa.map((resource, index) => {
-                            return (
-                                <div key={resource.resource_id} className="col s12">
-                                    <h5><a className="blue-text" target="_blank" href={resource.link}>{resource.name}</a></h5>
-                                </div>
-                            )
-                        })} */}
                     </div>
                 </div>
             </div>

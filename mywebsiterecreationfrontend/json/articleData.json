@@ -94,6 +94,7 @@
                                 "name": "Monstrous Ent itch.io",
                                 "description": "Play our game on itch.io",
                                 "link": "https://monstrous-entertainment.itch.io",
+                                "image_name": "",
                                 "image_link": ""
                             },
                             {
@@ -101,6 +102,7 @@
                                 "name": "Monstrous Ent Twitter",
                                 "description": "Follow us on Twitter to keep up to date our game!",
                                 "link": "https://twitter.com/MonstrousEnt",
+                                "image_name": "",
                                 "image_link": ""
                             }
                         ]
@@ -205,6 +207,7 @@
                                 "name": "My Youtube Gaming Channel",
                                 "description": "Here is my YouTube Gaming Channel!",
                                 "link": "https://www.youtube.com/@DangerousDan996",
+                                "image_name": "",
                                 "image_link": ""
                             }
                         ]
