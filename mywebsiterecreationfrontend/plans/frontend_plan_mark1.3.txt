@@ -1,0 +1,31 @@
+Components
+    Navbar
+       Static Data 
+    
+    Footer
+        Static Data 
+Pages
+    Home
+        Who Am I
+           Static Data 
+
+    Latest Article
+        GET all article quick view limit 4  
+            article 
+                name
+                image_preview 
+                preview
+
+    Article By Category
+        GET all article quick view by category limit 10
+              article 
+                    name
+                    image_preview 
+                    preview
+    Article Detail
+        GET article by id
+            last-updated
+            created
+            name
+            page
+            resources
