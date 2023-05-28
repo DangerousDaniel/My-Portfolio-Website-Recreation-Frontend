@@ -1,16 +1,66 @@
-@media only screen and (max-width: 600px) {
-.iframe-container-video {
+@media only screen and (min-width:321px) and (max-width:1000px) {
+  .iframe-container-video {
     overflow: hidden;
     padding-top: 56.25%;
     position: relative;
   }
-    .iframe-container-video iframe {
-     border: 0;
-     height: 100%;
-     left: 0;
-     position: absolute;
-     top: 0;
-     width: 100%;
+
+  .iframe-container-video iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .img-nav-mobile {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width:321px) and (max-width:602px) {
+  .img-nav-mobile {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width:602px) {
+  .img-nav-desktop {
+    width: 63px;
+    height: 63px;
+  }
+}
+
+@media only screen and (min-width:321px) and (max-width:992px) {
+  .nav-sidebar {
+    position: fixed;
+    height: 100%;
+    width: 230px;
+    top: 55px;
+    left: 0;
+  }
+
+  .nav-sidebar li {
+    padding: 8px 8px 8px 1px;
+  }
+}
+
+@media only screen and (min-width:602px) and (max-width:992px) {
+  .nav-sidebar {
+    position: fixed;
+    height: 100%;
+    width: 230px;
+    top: 63px;
+    left: 0;
+  }
+
+  .nav-sidebar li {
+    padding: 8px 8px 8px 1px;
   }
 }
 
