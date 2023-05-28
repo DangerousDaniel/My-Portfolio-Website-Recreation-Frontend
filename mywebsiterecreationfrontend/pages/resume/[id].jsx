@@ -24,8 +24,16 @@ export default function ResumeDetailPage({ resume }) {
                         <div className="col s12">
                             <h3>Resume</h3>
                         </div>
-                        <div className="col s12">
-                            <iframe width={1000} height={2000} src={resume.filePath} frameBorder="0" allowFullScreen></iframe>
+                        <div className="col s12 ">
+                            {resume.images.map((image, index) => {
+                                return (
+                                    <div>
+                                        <img src={image.link} alt={image.name} width={800} className="responsive-img" />
+                                        <br />
+                                        <br />
+                                    </div>
+                                )
+                            })}
                         </div>
                         {resume.resources.map((resource, index) => {
                             return (

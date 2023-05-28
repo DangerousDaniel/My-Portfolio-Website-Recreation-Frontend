@@ -44,7 +44,7 @@ export default function ArticleDetailPage({ article }) {
 
                                     {page_context.image &&
                                         <div key={page_context.image.image_id} className="col s12">
-                                            <img src={page_context.image.link} width={500} height={300} alt={page_context.image.name} />
+                                            <img src={page_context.image.link} alt={page_context.image.name} width={500} className="responsive-img" />
                                             <br />
                                             <span>{page_context.image.description}</span>
                                         </div>
@@ -52,7 +52,10 @@ export default function ArticleDetailPage({ article }) {
 
                                     {page_context.video &&
                                         <div key={page_context.video.video_id} className="col s12">
-                                            <iframe width={853} height={480} src={`${page_context.video.link}`} frameBorder="0" allowFullScreen></iframe>
+                                            <div className="iframe-container-video">
+                                                <iframe width={853} height={480} className="responsive-video" src={page_context.video.link} frameBorder="0" allowFullScreen></iframe>
+                                            </div>
+                                            <br />
                                         </div>
                                     }
 
@@ -62,10 +65,12 @@ export default function ArticleDetailPage({ article }) {
                                                 return (
                                                     <div key={resource.resource_id} className="col s12">
                                                         <h5>
-                                                            <a className="blue-text" target="_blank" href={resource.link}>{resource.description}
+                                                            <a className="blue-text" target="_blank" href={resource.link}>
                                                                 {resource.image_name &&
-                                                                    <img src={resource.image_link} width={20} height={20} alt={resource.image_name} />
+                                                                    <img src={resource.image_file_path} width={30} height={30} alt={resource.image_name} />
                                                                 }
+                                                                <span>&nbsp;</span>
+                                                                {resource.description}
                                                             </a>
                                                         </h5>
                                                     </div>

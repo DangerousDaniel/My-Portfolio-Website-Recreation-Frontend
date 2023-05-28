@@ -13,10 +13,10 @@ import Link from "next/link"
 export default function ArticleCard({ data }) {
 
     return (
-        <div className="col s12 m5 l3">
+        <div className="col s12 l4">
             <div className="card">
                 <div className="card-image">
-                    <img src={data.articleData.image_preview} alt={`Article Image Preview ${data.articleData.article_id}`} width="250" height="250" />
+                    <img src={data.articleData.image_preview} alt={`Article Image Preview ${data.articleData.article_id}`} />
                 </div>
                 <div className="card-content">
                     <h4>{data.articleData.name}</h4>

@@ -4,7 +4,24 @@
             {
                 "resume_id": 1,
                 "name": "Daniel Cox IT Resume",
-                "filePath": "../../pdfs/daniel_cox_it_resume.pdf",
+                "filePath": "pdfs/daniel_cox_it_resume.pdf",
+                "images": [
+                    {
+                        "image_id": 1,
+                        "name": "Daniel Cox IT Resume Page 1",
+                        "link": "/images/resume/daniel_cox_it_resume_page_1.png"
+                    },
+                    {
+                        "image_id": 2,
+                        "name": "Daniel Cox IT Resume Page 2",
+                        "link": "/images/resume/daniel_cox_it_resume_page_2.png"
+                    },
+                    {
+                        "image_id": 3,
+                        "name": "Daniel Cox IT Resume Page 3",
+                        "link": "/images/resume/daniel_cox_it_resume_page_3.png"
+                    }
+                ],
                 "resources": [
                     {
                         "resource_id": 1,

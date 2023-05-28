@@ -94,16 +94,16 @@
                                 "name": "Monstrous Ent itch.io",
                                 "description": "Play our game on itch.io",
                                 "link": "https://monstrous-entertainment.itch.io",
-                                "image_name": "",
-                                "image_link": ""
+                                "image_name": "itch.io Logo",
+                                "image_file_path": "/images/logo/itch.io_logo.png"
                             },
                             {
                                 "resource_id": 2,
                                 "name": "Monstrous Ent Twitter",
                                 "description": "Follow us on Twitter to keep up to date our game!",
                                 "link": "https://twitter.com/MonstrousEnt",
-                                "image_name": "",
-                                "image_link": ""
+                                "image_name": "Twitter Logo",
+                                "image_file_path": "/images/logo/twitter_logo.png"
                             }
                         ]
                     }
@@ -207,8 +207,8 @@
                                 "name": "My Youtube Gaming Channel",
                                 "description": "Here is my YouTube Gaming Channel!",
                                 "link": "https://www.youtube.com/@DangerousDan996",
-                                "image_name": "",
-                                "image_link": ""
+                                "image_name": "YouTube Logo",
+                                "image_file_path": "/images/logo/youtube_logo.png"
                             }
                         ]
                     }
