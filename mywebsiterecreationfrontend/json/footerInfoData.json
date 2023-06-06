@@ -17,24 +17,24 @@
                         "name": "Daniel Cox Person Gmail",
                         "description": "danielcox996@gmail.com",
                         "link": "#",
-                        "image_name": "",
-                        "image_link": ""
+                        "logo_name": "",
+                        "logo_local_filepath": ""
                     },
                     {
                         "resource_id": 2,
                         "name": "Daniel Cox Person Phone Number",
                         "description": "902-818-8129",                        
                         "link": "#",
-                        "image_name": "",
-                        "image_file_path": ""
+                        "logo_name": "",
+                        "logo_local_filepath": ""
                     },
                     {
                         "resource_id": 3,
                         "name": "Daniel Cox Linkedin",
                         "description": "Linkedin",                        
                         "link": "https://www.linkedin.com/in/daniel-cox-b0320115b/",
-                        "image_name": "Linkedin Logo",
-                        "image_file_path": "/images/logo/linkedin_logo.png"
+                        "logo_name": "Linkedin Logo",
+                        "logo_local_filepath": "linkedin_logo"
                     }
                 ]
             },

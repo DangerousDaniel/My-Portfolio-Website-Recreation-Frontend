@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 27, 2023
-    Last Updated: June 5, 2023
+    Last Updated: June 6, 2023
     Description: This is the component for displaying footer info.
     Notes:
     Resources: 
@@ -28,8 +28,8 @@ export default function FooterInfoSections({ footerInfoListData }) {
                                     return (
                                         <li key={resource.resource_id}>
                                             <a target="_blank" className="white-text" href={resource.link}>
-                                                {resource.image_name &&
-                                                    <img src={resource.image_file_path} width={20} height={20} alt={resource.image_name} />
+                                                {resource.logo_name &&
+                                                    <img src={`/images/logo/${resource.logo_local_filepath}.png`} width={20} height={20} alt={resource.logo_name} />
                                                 }
                                                 <span>&nbsp;</span>
                                                 {resource.description}

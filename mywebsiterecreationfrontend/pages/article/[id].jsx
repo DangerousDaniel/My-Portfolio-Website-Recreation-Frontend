@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 27, 2023
+    Last Updated: June 6, 2023
     Description: This is the page for article details.
     Notes:
     Resources: 
@@ -66,8 +66,8 @@ export default function ArticleDetailPage({ article }) {
                                                     <div key={resource.resource_id} className="col s12">
                                                         <h5>
                                                             <a className="blue-text" target="_blank" href={resource.link}>
-                                                                {resource.image_name &&
-                                                                    <img src={resource.image_file_path} width={30} height={30} alt={resource.image_name} />
+                                                                {resource.logo_name &&
+                                                                    <img src={`/images/logo/${resource.logo_local_filepath}.png`} width={30} height={30} alt={resource.logo_name} />
                                                                 }
                                                                 <span>&nbsp;</span>
                                                                 {resource.description}
