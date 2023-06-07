@@ -6,7 +6,7 @@ Welcome to the frontend repo for my portfolio website creation.
 This frontend repo is built in Next JS React Framework. Designed in CSS Materialize Framework. This website is for my portfolio projects.
 
 ## Fronted Resource    
-### [UX Plan](mywebsiterecreationfrontend/plans/frontend_plan_mark2.txt)
+### [UX Plan](mywebsiterecreationfrontend/plans/frontend_plan_mark2.1.txt)
 
 ### [My Website Recreation Project Board](https://github.com/users/DangerousDaniel/projects/3)
 

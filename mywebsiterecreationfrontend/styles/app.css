@@ -1,3 +1,4 @@
+/* iframe video responsive */ 
 @media only screen and (min-width:321px) and (max-width:1000px) {
   .iframe-container-video {
     overflow: hidden;
@@ -15,6 +16,7 @@
   }
 }
 
+/* nav logo image responsive */ 
 @media only screen and (max-width: 600px) {
   .img-nav-mobile {
     width: 55px;
@@ -33,34 +35,6 @@
   .img-nav-desktop {
     width: 63px;
     height: 63px;
-  }
-}
-
-@media only screen and (min-width:321px) and (max-width:992px) {
-  .nav-sidebar {
-    position: fixed;
-    height: 100%;
-    width: 230px;
-    top: 55px;
-    left: 0;
-  }
-
-  .nav-sidebar li {
-    padding: 8px 8px 8px 1px;
-  }
-}
-
-@media only screen and (min-width:602px) and (max-width:992px) {
-  .nav-sidebar {
-    position: fixed;
-    height: 100%;
-    width: 230px;
-    top: 63px;
-    left: 0;
-  }
-
-  .nav-sidebar li {
-    padding: 8px 8px 8px 1px;
   }
 }
 

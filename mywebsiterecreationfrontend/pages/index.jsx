@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 27, 2023
+    Last Updated: June 7, 2023
     Description: This is the page for home.
     Notes:
     Resources: 
@@ -11,9 +11,9 @@
 import { getLocalData } from "../components/localData/localData"
 import { useEffect } from "react"
 import ArticleCard from "../components/article/articleCard"
-import AboutDetail from "../components/about/aboutDetail";
+import AboutSection from "../components/about/aboutSection";
 
-export default function HomePage({ articles, aboutMes }) {
+export default function HomePage({ articles }) {
 
   useEffect(() => {
     document.title = `DangerousDan996 | Home`;
@@ -21,7 +21,7 @@ export default function HomePage({ articles, aboutMes }) {
 
   return (
     <div className="container">
-      <AboutDetail aboutData={aboutMes[0]}></AboutDetail>
+      <AboutSection></AboutSection>
       <div className="row ">
         <h3 className="white-text">Latest Articles</h3>
 
@@ -37,12 +37,10 @@ export default function HomePage({ articles, aboutMes }) {
 
 export async function getStaticProps() {
   const localDataArticle = await getLocalData('articleData.json')
-  const localDataAbout = await getLocalData('aboutMeData.json')
-
+  
   return {
     props: {
-      articles: localDataArticle[0].articles,
-      aboutMes: localDataAbout[0].aboutMes
+      articles: localDataArticle[0].articles
     }
   }
 }
