@@ -48,13 +48,10 @@
     margin: 0;
     padding-bottom: 60px;
     z-index: 999;
-    overflow-y: auto;
-    will-change: transform;
-    backface-visibility: hidden;
   }
 
   .nav-sidebar-moblie li {
-    padding: 8px 8px 8px 1px;
+    padding: 8px 8px 8px 8px;
   }
 
   .active-nav-item-moblie, .nav-item-moblie:hover {
@@ -71,13 +68,10 @@
     margin: 0;
     padding-bottom: 60px;
     z-index: 999;
-    overflow-y: auto;
-    will-change: transform;
-    backface-visibility: hidden;
   }
 
   .nav-sidebar-moblie li {
-    padding: 8px 8px 8px 1px;
+    padding: 8px 8px 8px 8px;
   }
 
   .active-nav-item-moblie, .nav-item-moblie:hover {
