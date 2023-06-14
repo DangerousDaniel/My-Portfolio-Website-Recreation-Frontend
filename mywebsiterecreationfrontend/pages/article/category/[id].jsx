@@ -2,15 +2,15 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 8, 2023
-    Description: This is the page is for article category.
+    Last Updated: May 27, 2023
+    Description: This is the page for article category.
     Notes:
     Resources: 
 */
 
-import { getLocalData } from "../../../comps/localData"
+import { getLocalData } from "../../../components/localData/localData"
 import { useEffect } from "react";
-import ArticleCard from "../../../comps/articleCard";
+import ArticleCard from "../../../components/article/articleCard";
 
 export default function ArticleCategoryPage({ articles, category }) {
 
@@ -21,10 +21,12 @@ export default function ArticleCategoryPage({ articles, category }) {
   return (
     <div className="container">
       <div className="row ">
-        <h3 className="white-text">Articles Other</h3>
         {articles.map((article, index) => {
           return (
-            <ArticleCard key={article.articleData.article_id} data={article}></ArticleCard>
+            <div key={article.articleData.article_id}>
+              <h3 className="white-text">{category.name}</h3>
+              <ArticleCard data={article}></ArticleCard>
+              </div>
           )
         })}
       </div>
@@ -33,7 +35,7 @@ export default function ArticleCategoryPage({ articles, category }) {
 }
 
 export async function getStaticPaths() {
-  const localData = await getLocalData()
+  const localData = await getLocalData('categoryData.json')
 
   const thePaths = localData[0].categories.map(category => {
     return { params: { id: category.category_id.toString() } }
@@ -46,10 +48,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const localData = await getLocalData()
+  const localDataCategory = await getLocalData('categoryData.json')
+  const localDataArticle = await getLocalData('articleData.json')
 
-  const articles = localData[1].articles.filter(article => article.articleData.category_id.toString() === context.params.id)
-  const category = localData[0].categories.filter(category => category.category_id.toString() === context.params.id)
+  const articles = localDataArticle[0].articles.filter(article => article.articleData.category_id.toString() === context.params.id)
+  const category = localDataCategory[0].categories.filter(category => category.category_id.toString() === context.params.id)
 
   return {
     props: {

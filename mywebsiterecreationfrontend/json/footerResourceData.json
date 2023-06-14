@@ -1,0 +1,58 @@
+[
+    {
+        "footerResources": [
+            {
+                "footer_resource_id": 1,
+                "name": "Framework Resources",
+                "resources": [
+                    {
+                        "resource_id": 1,
+                        "name": "Next JS React Framework",
+                        "link": "https://nextjs.org/"
+                    },
+                    {
+                        "resource_id": 2,
+                        "name": "Materialize CSS Framework",
+                        "link": "https://materializecss.com/"
+                    },
+                    {
+                        "resource_id": 3,
+                        "name": "Django Web Framework",
+                        "link": "https://www.djangoproject.com/"
+                    },
+                    {
+                        "resource_id": 4,
+                        "name": "Django REST Framework",
+                        "link": "https://www.django-rest-framework.org/"
+                    }
+                ]
+            },
+            {
+                "footer_resource_id": 2,
+                "name": "GitHub Repos Resources",
+                "resources": [
+                    {
+                        "resource_id": 5,
+                        "name": "My Portfolio Website Recreation Frontend Repo",
+                        "link": "https://github.com/DangerousDaniel/My-Website-Recreation-Frontend"
+                    },
+                    {
+                        "resource_id": 6,
+                        "name": "My Portfolio Website Recreation Backend Repo",
+                        "link": "https://github.com/DangerousDaniel/My-Portfolio-Website-Recreation-Backend"
+                    },
+                    {
+                        "resource_id": 7,
+                        "name": "My Portfolio Website Recreation Work Examples Repo",
+                        "link": "https://github.com/DangerousDaniel/My-Website-Recreation-Work-Examples"
+                    },
+                    {
+                        "resource_id": 8,
+                        "name": "My Original Portfolio Website Repo",
+                        "link": "https://github.com/DangerousDaniel/dangerousdaniel.github.io"
+                    }
+                ]
+            }
+        ]
+    }
+]

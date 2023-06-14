@@ -1,0 +1,24 @@
+[
+    {
+      "categories": [
+        {
+          "category_id": 1,
+          "name": "Monstrous Ent Game Demos"
+        },
+        {
+          "category_id": 2,
+          "name": "Other"
+        }
+      ]
+    },
+    {
+      "database": [
+        {
+          "error": false
+        },
+        {
+          "message": "Database select queries was successfully retrieved from the Category table."
+        }
+      ]
+    }
+  ]
