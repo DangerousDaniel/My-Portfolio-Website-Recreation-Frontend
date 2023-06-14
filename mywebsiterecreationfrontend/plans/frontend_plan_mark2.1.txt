@@ -3,12 +3,12 @@ Components
        Static Data 
     
     Footer (Done)
-        Static Data for Copyright Data
-        Json data for footer sections
+        Static data for Copyright Data
+        Static data for footer sections
 Pages
     Home (Done)
         About Me
-           Json Data 
+           Static data 
 
     Latest Article
         GET all article quick view limit 4  
@@ -32,3 +32,6 @@ Pages
             images
             videos
             resources
+
+    Resume (Done)
+       Static Data  

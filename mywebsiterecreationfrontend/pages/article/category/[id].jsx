@@ -13,7 +13,6 @@ import { useEffect } from "react";
 import ArticleCard from "../../../components/article/articleCard";
 
 export default function ArticleCategoryPage({ articles, category }) {
-
   useEffect(() => {
     document.title = `DangerousDan996 | ${category.name}`;
   }, []);
@@ -36,7 +35,6 @@ export default function ArticleCategoryPage({ articles, category }) {
 
 export async function getStaticPaths() {
   const localData = await getLocalData('categoryData.json')
-
   const thePaths = localData[0].categories.map(category => {
     return { params: { id: category.category_id.toString() } }
   })

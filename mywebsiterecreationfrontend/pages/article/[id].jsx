@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 27, 2023
+    Last Updated: June 6, 2023
     Description: This is the page for article details.
     Notes:
     Resources: 
@@ -12,7 +12,6 @@ import { getLocalData } from "../../components/localData/localData"
 import { useEffect } from "react";
 
 export default function ArticleDetailPage({ article }) {
-
     useEffect(() => {
         document.title = `DangerousDan996 | ${article.articleData.name}`;
     }, []);
@@ -44,7 +43,7 @@ export default function ArticleDetailPage({ article }) {
 
                                     {page_context.image &&
                                         <div key={page_context.image.image_id} className="col s12">
-                                            <img src={page_context.image.link} width={500} height={300} alt={page_context.image.name} />
+                                            <img src={page_context.image.link} alt={page_context.image.name} width={500} className="responsive-img" />
                                             <br />
                                             <span>{page_context.image.description}</span>
                                         </div>
@@ -52,7 +51,10 @@ export default function ArticleDetailPage({ article }) {
 
                                     {page_context.video &&
                                         <div key={page_context.video.video_id} className="col s12">
-                                            <iframe width={853} height={480} src={`${page_context.video.link}`} frameBorder="0" allowFullScreen></iframe>
+                                            <div className="iframe-container-video">
+                                                <iframe width={853} height={480} className="responsive-video" src={page_context.video.link} frameBorder="0" allowFullScreen></iframe>
+                                            </div>
+                                            <br />
                                         </div>
                                     }
 
@@ -62,10 +64,12 @@ export default function ArticleDetailPage({ article }) {
                                                 return (
                                                     <div key={resource.resource_id} className="col s12">
                                                         <h5>
-                                                            <a className="blue-text" target="_blank" href={resource.link}>{resource.description}
-                                                                {resource.image_name &&
-                                                                    <img src={resource.image_link} width={20} height={20} alt={resource.image_name} />
+                                                            <a className="blue-text" target="_blank" href={resource.link}>
+                                                                {resource.logo_name &&
+                                                                    <img src={`/images/logo/${resource.logo_local_filepath}.png`} width={30} height={30} alt={resource.logo_name} />
                                                                 }
+                                                                <span>&nbsp;</span>
+                                                                {resource.description}
                                                             </a>
                                                         </h5>
                                                     </div>
@@ -86,7 +90,6 @@ export default function ArticleDetailPage({ article }) {
 
 export async function getStaticPaths() {
     const localData = await getLocalData('articleData.json')
-
     const thePaths = localData[0].articles.map(article => {
         return { params: { id: article.articleData.article_id.toString() } }
     })
@@ -99,7 +102,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const localData = await getLocalData('articleData.json')
-
     const article = localData[0].articles.filter(article => article.articleData.article_id.toString() === context.params.id)
 
     return {
