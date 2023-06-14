@@ -35,11 +35,16 @@ export default function NavBar() {
                 </div>
             </nav>
             {mobileMenuIsActive &&
-                <div className="blue-grey darken-3 nav-sidebar-mobile hide-on-large-only" onClick={toggleMobileMenu}>
+                <div id="slide-out" class="nav-sidebar-mobile blue-grey darken-3 hide-on-large-only" onClick={toggleMobileMenu}>
+                    <a onClick={toggleMobileMenu} className="right waves-effect waves-light btn blue-grey darken-2"><i className="material-icons">close</i></a>
                     <ul>
-                        <li><a onClick={toggleMobileMenu} className="right sidenav-trigger waves-effect waves-light btn blue-grey darken-2"><i className="material-icons">close</i></a></li>
-                        <li><Link href="/"><img src="/images/logo/my_youtube_gaming_logo_2020_v2.2.png" alt="Picture of the author" className="nav-item-mobile-logo" /></Link></li>
-                        <li><h4><Link className="white-text" href="/">DangerousDan996</Link></h4></li>
+                        <li className="nav-sidebar-background-mobile">
+                                <a href="#user"><img class="circle" src="/images/logo/my_youtube_gaming_logo_2020_v2.2.png" width="20%" /></a>
+                                <a href="#name"><span class="white-text name">DangerousDan996</span></a>
+                        </li>
+                        <div class="divider"></div>
+                    </ul>
+                    <ul>
                         <li className={router.asPath == "/" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"} ><Link className="white-text" href="/">Home</Link></li>
                         <li className={router.asPath == "/article/category/1" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"}><Link className="white-text" href="/article/category/1">Monstrous Ent Game Demos</Link></li>
                         <li className={router.asPath == "/article/category/2" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"}><Link className="white-text" href="/article/category/2">Other</Link></li>
