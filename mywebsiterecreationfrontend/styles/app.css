@@ -50,12 +50,9 @@
     z-index: 999;
   }
   
-  /* .nav-item-mobile-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  } */
+  .nav-sidebar-user-view-mobile {
+  text-align: center;
+  }
 
   .nav-sidebar-mobile li {
     padding: 20px 20px 20px 20px;
