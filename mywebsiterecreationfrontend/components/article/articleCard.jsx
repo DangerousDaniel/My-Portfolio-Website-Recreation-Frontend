@@ -7,7 +7,6 @@
     Notes:
     Resources: 
 */
-
 import Link from "next/link"
 
 export default function ArticleCard({ data }) {

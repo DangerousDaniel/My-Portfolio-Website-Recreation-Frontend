@@ -17,13 +17,11 @@ export default function AboutSection() {
 
             <div className="col s12 l6 white-text">
                 <h2>About Me</h2>
-
                 <p>
                     I graduated from NSCC IT Programming (Class of 2020).
                     For the last 3 years I've been developing a 2.5D fantasy RPG platform game named Vex Monsters,
                     where you save monsters from an evil mysterious villain.
                 </p>
-
                 <p>
                     Throughout my experience as a programmer,
                     I have completed several challenging projects for game development (General),

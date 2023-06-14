@@ -12,7 +12,6 @@ import { getLocalData } from "../../components/localData/localData"
 import { useEffect } from "react";
 
 export default function ArticleDetailPage({ article }) {
-
     useEffect(() => {
         document.title = `DangerousDan996 | ${article.articleData.name}`;
     }, []);
@@ -91,7 +90,6 @@ export default function ArticleDetailPage({ article }) {
 
 export async function getStaticPaths() {
     const localData = await getLocalData('articleData.json')
-
     const thePaths = localData[0].articles.map(article => {
         return { params: { id: article.articleData.article_id.toString() } }
     })
@@ -104,7 +102,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const localData = await getLocalData('articleData.json')
-
     const article = localData[0].articles.filter(article => article.articleData.article_id.toString() === context.params.id)
 
     return {
