@@ -2,15 +2,17 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 27, 2023
+    Last Updated: June 18, 2023
     Description: This is the page for article category.
     Notes:
     Resources: 
 */
 
-import { getLocalData } from "../../../components/localData/localData"
 import { useEffect } from "react";
 import ArticleCard from "../../../components/article/articleCard";
+import getCategoryAll from "../../../js/crud/category/read/getCategoryAll";
+import getCategoryDetail from "../../../js/crud/category/read/getCategoryDetail";
+import getArticleAllQuickViewCategory from "../../../js/crud/article/read/getArticleAllQuickViewCategory";
 
 export default function ArticleCategoryPage({ articles, category }) {
   useEffect(() => {
@@ -22,10 +24,10 @@ export default function ArticleCategoryPage({ articles, category }) {
       <div className="row ">
         {articles.map((article, index) => {
           return (
-            <div key={article.articleData.article_id}>
+            <div key={article.article_id}>
               <h3 className="white-text">{category.name}</h3>
               <ArticleCard data={article}></ArticleCard>
-              </div>
+            </div>
           )
         })}
       </div>
@@ -34,8 +36,8 @@ export default function ArticleCategoryPage({ articles, category }) {
 }
 
 export async function getStaticPaths() {
-  const localData = await getLocalData('categoryData.json')
-  const thePaths = localData[0].categories.map(category => {
+  const categories = await getCategoryAll()
+  const thePaths = categories.map(category => {
     return { params: { id: category.category_id.toString() } }
   })
 
@@ -46,16 +48,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const localDataCategory = await getLocalData('categoryData.json')
-  const localDataArticle = await getLocalData('articleData.json')
-
-  const articles = localDataArticle[0].articles.filter(article => article.articleData.category_id.toString() === context.params.id)
-  const category = localDataCategory[0].categories.filter(category => category.category_id.toString() === context.params.id)
+  const articles = await getArticleAllQuickViewCategory(context.params.id, 0, 30)
+  const category = await getCategoryDetail(context.params.id)
 
   return {
     props: {
-      articles,
-      category: category[0]
+      articles: articles,
+      category: category
     }
   }
 }

@@ -36,7 +36,7 @@ export default function HomePage({ articles }) {
 }
 
 export async function getStaticProps() {
-  let articles = await getArticleAllQuickView(0, 6)
+  const articles = await getArticleAllQuickView(0, 6)
 
   return {
     props: {

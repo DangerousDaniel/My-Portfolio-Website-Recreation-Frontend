@@ -90,7 +90,7 @@ export default function ArticleDetailPage({ article }) {
 }
 
 export async function getStaticPaths() {
-    let articles = await getArticleAll()
+    const articles = await getArticleAll()
     const thePaths = articles.map(article => {
         return { params: { id: article.articleData.article_id.toString() } }
     })

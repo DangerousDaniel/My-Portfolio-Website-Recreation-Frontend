@@ -3,13 +3,13 @@
     Authors: Daniel Cox
     Created Date: June 18, 2023
     Last Updated: June 18, 2023
-    Description: This is javascript file is for get article all from the database web sever.
+    Description: This is javascript file is for get article all quick view category from the database web sever.
     Notes:
     Resources: 
 */
 
-const getArticleAll = async () => {
-    const response = await fetch(`http://35.227.50.190/article/all`, {
+const getArticleAllQuickViewCategory = async (id, offsetNum = 0, limitNum = 10) => {
+    const response = await fetch(`http://35.227.50.190/article/all/quick-view/category/${id}/${offsetNum}/${limitNum}`, {
         method: 'GET', headers: {
             'Accept': 'application/json',
             "Content-Type": "application/json"
@@ -21,4 +21,4 @@ const getArticleAll = async () => {
     return articlesListJsonData
 }
 
-export default getArticleAll
+export default getArticleAllQuickViewCategory

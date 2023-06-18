@@ -3,13 +3,13 @@
     Authors: Daniel Cox
     Created Date: June 18, 2023
     Last Updated: June 18, 2023
-    Description: This is javascript file is for get article all from the database web sever.
+    Description: This is javascript file is for get category detail from the database web sever.
     Notes:
     Resources: 
 */
 
-const getArticleAll = async () => {
-    const response = await fetch(`http://35.227.50.190/article/all`, {
+const getCategoryDetail = async (id) => {
+    const response = await fetch(`http://35.227.50.190/category/detail/${id}`, {
         method: 'GET', headers: {
             'Accept': 'application/json',
             "Content-Type": "application/json"
@@ -17,8 +17,8 @@ const getArticleAll = async () => {
     })
 
     const data = await response.json()
-    let articlesListJsonData = data[0].articles
-    return articlesListJsonData
+    let CategoryJsonData = data[0].category
+    return CategoryJsonData
 }
 
-export default getArticleAll
+export default getCategoryDetail
