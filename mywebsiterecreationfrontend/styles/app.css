@@ -42,18 +42,16 @@
 @media only screen and (min-width:321px) and (max-width:992px) {
   .nav-sidebar-mobile {
     position: fixed;
+  
     width: 300px;
     right: 0;
     top: 0;
     margin: 0;
     z-index: 999;
   }
-
-  .nav-item-mobile-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+  
+  .nav-sidebar-user-view-mobile {
+  text-align: center;
   }
 
   .nav-sidebar-mobile li {
