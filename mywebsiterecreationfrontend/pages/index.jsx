@@ -11,7 +11,7 @@
 import { useEffect } from "react"
 import ArticleCard from "../components/article/articleCard"
 import AboutSection from "../components/about/aboutSection";
-import getAllArticleQuickView from "../js/crud/article/read/getAllArticleQuickView";
+import getArticleAllQuickView from "../js/crud/article/read/getArticleAllQuickView";
 
 export default function HomePage({ articles }) {
 
@@ -36,7 +36,7 @@ export default function HomePage({ articles }) {
 }
 
 export async function getStaticProps() {
-  let articles = await getAllArticleQuickView(0, 6)
+  let articles = await getArticleAllQuickView(0, 6)
 
   return {
     props: {

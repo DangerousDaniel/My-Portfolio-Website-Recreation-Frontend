@@ -2,14 +2,15 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: June 6, 2023
+    Last Updated: June 18, 2023
     Description: This is the page for article details.
     Notes:
     Resources: 
 */
 
-import { getLocalData } from "../../components/localData/localData"
 import { useEffect } from "react";
+import getArticleAll from "../../js/crud/article/read/getArticleAll";
+import getArticleDetail from "../../js/crud/article/read/getArticleDetail";
 
 export default function ArticleDetailPage({ article }) {
     useEffect(() => {
@@ -30,7 +31,7 @@ export default function ArticleDetailPage({ article }) {
                         <br />
                         <div className="right">Created Date: {createdDate.toLocaleDateString("en-US", options)}</div>
                         <div className="col s12"><h3>{article.articleData.name}</h3></div>
-                        {article.page_context.map((page_context, index) => {
+                        {article.pageContext.map((page_context, index) => {
                             return (
                                 <div key={index}>
                                     {page_context.paragraph &&
@@ -89,8 +90,8 @@ export default function ArticleDetailPage({ article }) {
 }
 
 export async function getStaticPaths() {
-    const localData = await getLocalData('articleData.json')
-    const thePaths = localData[0].articles.map(article => {
+    let articles = await getArticleAll()
+    const thePaths = articles.map(article => {
         return { params: { id: article.articleData.article_id.toString() } }
     })
 
@@ -101,12 +102,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const localData = await getLocalData('articleData.json')
-    const article = localData[0].articles.filter(article => article.articleData.article_id.toString() === context.params.id)
+    let article = await getArticleDetail(context.params.id)
 
     return {
         props: {
-            article: article[0]
-        }
+            article: article
+        },
+        revalidate: 10,
     }
 }

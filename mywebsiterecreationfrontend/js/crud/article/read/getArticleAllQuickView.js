@@ -1,4 +1,4 @@
-const getAllArticleQuickView = async (offsetNum = 0, limitNum = 10) => {
+const getArticleAllQuickView = async (offsetNum = 0, limitNum = 10) => {
     const response = await fetch(`http://35.227.50.190/article/all/quick-view/${offsetNum}/${limitNum}`, {
         method: 'GET', headers: {
             'Accept': 'application/json',
@@ -11,4 +11,4 @@ const getAllArticleQuickView = async (offsetNum = 0, limitNum = 10) => {
     return articlesListJsonData
 }
 
-export default getAllArticleQuickView
+export default getArticleAllQuickView
