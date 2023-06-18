@@ -8,6 +8,8 @@
     Resources: 
 */
 
+import checkFetchRead from "../../checkFetchRead"
+
 const getCategoryDetail = async (id) => {
     const response = await fetch(`http://35.227.50.190/category/detail/${id}`, {
         method: 'GET', headers: {
@@ -16,9 +18,31 @@ const getCategoryDetail = async (id) => {
         }
     })
 
-    const data = await response.json()
-    let CategoryJsonData = data[0].category
-    return CategoryJsonData
+    if (response.status === 200) {
+        const data = await response.json()
+        const categoryJsonData = data[0].category
+
+        const fetchResponse = {
+            categoryJsonData, 
+            databaseMessage: data[1].database[1].message,
+            isError: data[1].database[0].error
+        }
+
+        return fetchResponse
+        
+    } else {
+        const checkFetchData = await checkFetchRead(response.status, response)
+
+        const categoryJsonData = null
+        
+        const fetchResponse = {
+            categoryJsonData,
+            databaseMessage: checkFetchData.databaseMessage,
+            isError: checkFetchData.isError
+        }
+
+        return fetchResponse
+    }
 }
 
 export default getCategoryDetail
