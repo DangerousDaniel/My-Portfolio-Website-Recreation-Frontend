@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 8, 2023
-    Last Updated: May 27, 2023
+    Last Updated: June 18, 2023
     Description: This is the component for article card.
     Notes:
     Resources: 
@@ -15,14 +15,14 @@ export default function ArticleCard({ data }) {
         <div className="col s12 l4">
             <div className="card">
                 <div className="card-image">
-                    <img src={data.articleData.image_preview} alt={`Article Image Preview ${data.articleData.article_id}`} />
+                    <img src={data.image_preview} alt={`Article Image Preview ${data.article_id}`} />
                 </div>
                 <div className="card-content">
-                    <h4>{data.articleData.name}</h4>
-                    <p>{data.articleData.summary}</p>
+                    <h4>{data.name}</h4>
+                    <p>{data.summary}</p>
                 </div>
                 <div className="card-action">
-                    <Link className="blue-text" href={`../../article/${data.articleData.article_id}`}>Learn More!</Link>
+                    <Link className="blue-text" href={`../../article/${data.article_id}`}>Learn More!</Link>
                 </div>
             </div>
         </div>
