@@ -10,20 +10,20 @@ Pages
         About Me
            Static data 
 
-    Latest Article
+    Latest Article (Done)
         GET all article quick view limit 4  
             article 
                 name
                 image_preview 
                 preview
 
-    Article By Category
+    Article By Category (Done)
         GET all article quick view by category limit 10
               article 
                     name
                     image_preview 
                     preview
-    Article Detail
+    Article Detail (Done)
         GET article by id
             last-updated
             created
