@@ -1,0 +1,64 @@
+/* iframe video responsive */
+@media only screen and (min-width:321px) and (max-width:1000px) {
+  .iframe-container-video {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+  }
+
+  .iframe-container-video iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* nav logo image responsive */
+@media only screen and (max-width: 600px) {
+  .logo-nav-mobile {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width:321px) and (max-width:602px) {
+  .logo-nav-mobile {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width:602px) {
+  .logo-nav-desktop {
+    width: 63px;
+    height: 63px;
+  }
+}
+
+/* nav sidebar mobile */
+@media only screen and (min-width:321px) and (max-width:992px) {
+  .nav-sidebar-mobile {
+    position: fixed;
+  
+    width: 300px;
+    right: 0;
+    top: 0;
+    margin: 0;
+    z-index: 999;
+  }
+  
+  .nav-sidebar-user-view-mobile {
+  text-align: center;
+  }
+
+  .nav-sidebar-mobile li {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .active-nav-item-mobile, .nav-item-mobile:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+}

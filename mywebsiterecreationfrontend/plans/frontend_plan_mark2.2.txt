@@ -1,0 +1,37 @@
+Components
+    Navbar (Done)
+       Static Data 
+    
+    Footer (Done)
+        Static data for Copyright Data
+        Static data for footer sections
+Pages
+    Home (Done)
+        About Me
+           Static data 
+
+    Latest Article (Done)
+        GET all article quick view limit 4  
+            article 
+                name
+                image_preview 
+                preview
+
+    Article By Category (Done)
+        GET all article quick view by category limit 10
+              article 
+                    name
+                    image_preview 
+                    preview
+    Article Detail (Done)
+        GET article by id
+            last-updated
+            created
+            name
+            paragraphs
+            images
+            videos
+            resources
+
+    Resume (Done)
+       Static Data  
