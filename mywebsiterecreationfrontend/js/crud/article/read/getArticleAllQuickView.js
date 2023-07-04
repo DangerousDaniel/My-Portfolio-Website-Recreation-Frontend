@@ -16,9 +16,43 @@ const getArticleAllQuickView = async (offsetNum = 0, limitNum = 10) => {
         }
     })
 
-    const data = await response.json()
-    let articlesListJsonData = data[0].articles
-    return articlesListJsonData
+    let articlesListJsonData = null
+    if (response.status === 200) {
+        const data = await response.json()
+        articlesListJsonData = data[0].articles
+
+        const fetchResponse = {
+            articlesListJsonData, 
+            databaseMessage: data[1].database[1].message,
+            isError: data[1].database[0].error
+        }
+
+        return fetchResponse
+    }
+    else if (response.status === 500) {
+        const databaseMessage = `There is a backend Internal Server Error for ${getArticleAllQuickView.name}`
+        const isError = true
+
+        const fetchResponse = {
+            articlesListJsonData,
+            databaseMessage,
+            isError,
+        }
+
+        return fetchResponse
+    }
+    else if (response.status === 503) {
+        const databaseMessage = `There is a backend Internal Server Error for ${getArticleAllQuickView.name}`
+        const isError = true
+
+        const fetchResponse = {
+            articlesListJsonData,
+            databaseMessage,
+            isError,
+        }
+
+        return fetchResponse
+    }
 }
 
 export default getArticleAllQuickView

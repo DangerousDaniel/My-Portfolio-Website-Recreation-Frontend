@@ -16,9 +16,42 @@ const getCategoryDetail = async (id) => {
         }
     })
 
-    const data = await response.json()
-    let CategoryJsonData = data[0].category
-    return CategoryJsonData
+    let categoryJsonData = null
+    if (response.status === 200) {
+        const data = await response.json()
+        categoryJsonData = data[0].category
+        const fetchResponse = {
+            categoryJsonData, 
+            databaseMessage: data[1].database[1].message,
+            isError: data[1].database[0].error
+        }
+
+        return fetchResponse
+    }
+    else if (response.status === 500) {
+        const databaseMessage = `There is a backend Internal Server Error for ${getCategoryDetail.name}`
+        const isError = true
+
+        const fetchResponse = {
+            categoryJsonData,
+            databaseMessage,
+            isError,
+        }
+
+        return fetchResponse
+    }
+    else if (response.status === 503) {
+        const databaseMessage = `There is a backend Internal Server Error for ${getCategoryDetail.name}`
+        const isError = true
+
+        const fetchResponse = {
+            categoryJsonData,
+            databaseMessage,
+            isError,
+        }
+
+        return fetchResponse
+    }
 }
 
 export default getCategoryDetail

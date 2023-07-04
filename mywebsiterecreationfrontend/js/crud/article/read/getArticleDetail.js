@@ -16,9 +16,43 @@ const getArticleDetail = async (id) => {
         }
     })
 
-    const data = await response.json()
-    let articleJsonData = data[0].article
-    return articleJsonData
+    let articleJsonData = null
+    if (response.status === 200) {
+        const data = await response.json()
+        articleJsonData = data[0].article
+
+        const fetchResponse = {
+            articleJsonData, 
+            databaseMessage: data[1].database[1].message,
+            isError: data[1].database[0].error
+        }
+
+        return fetchResponse
+    }
+    else if (response.status === 500) {
+        const databaseMessage = `There is a backend Internal Server Error for ${getArticleDetail.name}`
+        const isError = true
+
+        const fetchResponse = {
+            articleJsonData,
+            databaseMessage,
+            isError,
+        }
+
+        return fetchResponse
+    }
+    else if (response.status === 503) {
+        const databaseMessage = `There is a backend Internal Server Error for ${getArticleDetail.name}`
+        const isError = true
+
+        const fetchResponse = {
+            articleJsonData,
+            databaseMessage,
+            isError,
+        }
+
+        return fetchResponse
+    }
 }
 
 export default getArticleDetail

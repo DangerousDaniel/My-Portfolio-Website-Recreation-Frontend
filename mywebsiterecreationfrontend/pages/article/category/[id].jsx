@@ -14,30 +14,41 @@ import getCategoryAll from "../../../js/crud/category/read/getCategoryAll";
 import getCategoryDetail from "../../../js/crud/category/read/getCategoryDetail";
 import getArticleAllQuickViewCategory from "../../../js/crud/article/read/getArticleAllQuickViewCategory";
 
-export default function ArticleCategoryPage({ articles, category }) {
+export default function ArticleCategoryPage({ articles, category, databaseMessageArticleAllQuickViewCategory, isErrorArticleAllQuickViewCategory, databaseMessageCategoryDetail, isErrorCategoryDetail }) {
   useEffect(() => {
-    document.title = `DangerousDan996 | ${category.name}`;
+    if (isErrorArticleAllQuickViewCategory === false && category) {
+      document.title = `DangerousDan996 | ${category.name}`;
+    }
+    else {
+      document.title = `DangerousDan996 | Category Not Found (Error)`;
+    }
   }, []);
 
   return (
     <div className="container">
       <div className="row ">
-        {articles.map((article, index) => {
-          return (
-            <div key={article.article_id}>
-              <h3 className="white-text">{category.name}</h3>
-              <ArticleCard data={article}></ArticleCard>
-            </div>
-          )
-        })}
+        {isErrorArticleAllQuickViewCategory && <h4 className="red-text">{databaseMessageArticleAllQuickViewCategory}</h4>}
+        {isErrorCategoryDetail && <h4 className="red-text">{databaseMessageCategoryDetail}</h4>}
+
+        {articles &&
+          articles.map((article, index) => {
+            return (
+              <div key={article.article_id}>
+                {category &&
+                  <h3 className="white-text">{category.name}</h3>
+                }
+                <ArticleCard data={article}></ArticleCard>
+              </div>
+            )
+          })}
       </div>
     </div>
   )
 }
 
 export async function getStaticPaths() {
-  const categories = await getCategoryAll()
-  const thePaths = categories.map(category => {
+  const fetchResponse = await getCategoryAll()
+  const thePaths = fetchResponse.categoryListJsonData.map(category => {
     return { params: { id: category.category_id.toString() } }
   })
 
@@ -48,13 +59,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const articles = await getArticleAllQuickViewCategory(context.params.id, 0, 30)
-  const category = await getCategoryDetail(context.params.id)
+  const fetchResponseArticleAllQuickViewCategory = await getArticleAllQuickViewCategory(context.params.id, 0, 30)
+  const fetchResponseCategoryDetail = await getCategoryDetail(context.params.id)
 
   return {
     props: {
-      articles: articles,
-      category: category
+      articles: fetchResponseArticleAllQuickViewCategory.articlesListJsonData,
+      category: fetchResponseCategoryDetail.categoryJsonData,
+
+      databaseMessageArticleAllQuickViewCategory: fetchResponseArticleAllQuickViewCategory.databaseMessage,
+      isErrorArticleAllQuickViewCategory: fetchResponseArticleAllQuickViewCategory.isError,
+      
+      databaseMessageCategoryDetail: fetchResponseCategoryDetail.databaseMessage,
+      isErrorCategoryDetail: fetchResponseCategoryDetail.isError
     }
   }
 }
