@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 26, 2023
-    Last Updated: June 6, 2023
+    Last Updated: July 4, 2023
     Description: This is the component is for displaying the about me data.
     Notes:
     Resources: 

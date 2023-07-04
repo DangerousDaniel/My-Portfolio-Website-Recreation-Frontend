@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 27, 2023
+      Last Updated: July 4, 2023
     Description: This class is the root of the app.
     Notes:
     Resources: 

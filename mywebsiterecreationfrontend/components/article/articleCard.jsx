@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 8, 2023
-    Last Updated: June 18, 2023
+    Last Updated: July 4, 2023
     Description: This is the component for article card.
     Notes:
     Resources: 
