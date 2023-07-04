@@ -2,18 +2,18 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: June 7, 2023
+    Last Updated: July 4, 2023
     Description: This is the page for home.
     Notes:
     Resources: 
 */
 
-import { getLocalData } from "../components/localData/localData"
 import { useEffect } from "react"
 import ArticleCard from "../components/article/articleCard"
 import AboutSection from "../components/about/aboutSection";
+import getArticleAllQuickView from "../js/crud/article/read/getArticleAllQuickView";
 
-export default function HomePage({ articles }) {
+export default function HomePage({ articles, databaseMessage, isError }) {
 
   useEffect(() => {
     document.title = `DangerousDan996 | Home`;
@@ -24,24 +24,29 @@ export default function HomePage({ articles }) {
       <AboutSection></AboutSection>
       <div className="row ">
         <h3 className="white-text">Latest Articles</h3>
+        {isError && <h4 className="red-text">{databaseMessage}</h4>}
 
-        {articles.map((article, index) => {
-          return (
-            <ArticleCard key={article.articleData.article_id} data={article}></ArticleCard>
-          )
-        })}
+        {articles &&
+          articles.map((article, index) => {
+            return (
+              <ArticleCard key={article.article_id} data={article}></ArticleCard>
+            )
+          })}
       </div>
     </div>
   )
 }
 
 export async function getStaticProps() {
-  const localDataArticle = await getLocalData('articleData.json')
-  
+  const fetchResponse = await getArticleAllQuickView(0, 6)
+
   return {
     props: {
-      articles: localDataArticle[0].articles
-    }
+      articles: fetchResponse.articlesListJsonData,
+      databaseMessage: fetchResponse.databaseMessage,
+      isError: fetchResponse.isError
+    },
+    revalidate: 10,
   }
 }
 

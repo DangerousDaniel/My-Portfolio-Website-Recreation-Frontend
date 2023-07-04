@@ -2,40 +2,53 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: May 27, 2023
+    Last Updated: July 4, 2023
     Description: This is the page for article category.
     Notes:
     Resources: 
 */
 
-import { getLocalData } from "../../../components/localData/localData"
 import { useEffect } from "react";
 import ArticleCard from "../../../components/article/articleCard";
+import getCategoryAll from "../../../js/crud/category/read/getCategoryAll";
+import getCategoryDetail from "../../../js/crud/category/read/getCategoryDetail";
+import getArticleAllQuickViewCategory from "../../../js/crud/article/read/getArticleAllQuickViewCategory";
 
-export default function ArticleCategoryPage({ articles, category }) {
+export default function ArticleCategoryPage({ articles, category, databaseMessageArticleAllQuickViewCategory, isErrorArticleAllQuickViewCategory, databaseMessageCategoryDetail, isErrorCategoryDetail }) {
   useEffect(() => {
-    document.title = `DangerousDan996 | ${category.name}`;
+    if (isErrorArticleAllQuickViewCategory === false && category) {
+      document.title = `DangerousDan996 | ${category.name}`;
+    }
+    else {
+      document.title = `DangerousDan996 | Category Not Found (Error)`;
+    }
   }, []);
 
   return (
     <div className="container">
       <div className="row ">
-        {articles.map((article, index) => {
-          return (
-            <div key={article.articleData.article_id}>
-              <h3 className="white-text">{category.name}</h3>
-              <ArticleCard data={article}></ArticleCard>
+        {isErrorArticleAllQuickViewCategory && <h4 className="red-text">{databaseMessageArticleAllQuickViewCategory}</h4>}
+        {isErrorCategoryDetail && <h4 className="red-text">{databaseMessageCategoryDetail}</h4>}
+
+        {articles &&
+          articles.map((article, index) => {
+            return (
+              <div key={article.article_id}>
+                {category &&
+                  <h3 className="white-text">{category.name}</h3>
+                }
+                <ArticleCard data={article}></ArticleCard>
               </div>
-          )
-        })}
+            )
+          })}
       </div>
     </div>
   )
 }
 
 export async function getStaticPaths() {
-  const localData = await getLocalData('categoryData.json')
-  const thePaths = localData[0].categories.map(category => {
+  const fetchResponse = await getCategoryAll()
+  const thePaths = fetchResponse.categoryListJsonData.map(category => {
     return { params: { id: category.category_id.toString() } }
   })
 
@@ -46,16 +59,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const localDataCategory = await getLocalData('categoryData.json')
-  const localDataArticle = await getLocalData('articleData.json')
-
-  const articles = localDataArticle[0].articles.filter(article => article.articleData.category_id.toString() === context.params.id)
-  const category = localDataCategory[0].categories.filter(category => category.category_id.toString() === context.params.id)
+  const fetchResponseArticleAllQuickViewCategory = await getArticleAllQuickViewCategory(context.params.id, 0, 30)
+  const fetchResponseCategoryDetail = await getCategoryDetail(context.params.id)
 
   return {
     props: {
-      articles,
-      category: category[0]
+      articles: fetchResponseArticleAllQuickViewCategory.articlesListJsonData,
+      category: fetchResponseCategoryDetail.categoryJsonData,
+
+      databaseMessageArticleAllQuickViewCategory: fetchResponseArticleAllQuickViewCategory.databaseMessage,
+      isErrorArticleAllQuickViewCategory: fetchResponseArticleAllQuickViewCategory.isError,
+      
+      databaseMessageCategoryDetail: fetchResponseCategoryDetail.databaseMessage,
+      isErrorCategoryDetail: fetchResponseCategoryDetail.isError
     }
   }
 }

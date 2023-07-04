@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: May 1, 2023
-    Last Updated: June 13, 2023
+    Last Updated: July 4, 2023
     Description: This is the component for the navbar.
     Notes:
     Resources: 
@@ -29,7 +29,7 @@ export default function NavBar() {
                     <ul className="right hide-on-med-and-down">
                         <li className={router.asPath == "/" ? "active" : ""}><Link href="/">Home</Link></li>
                         <li className={router.asPath == "/article/category/1" ? "active" : ""}><Link href="/article/category/1">Monstrous Ent Game Demos</Link></li>
-                        <li className={router.asPath == "/article/category/2" ? "active" : ""}><Link href="/article/category/2">Other</Link></li>
+                        <li className={router.asPath == "/article/category/2" ? "active" : ""}><Link href="/article/category/2">Other Articles</Link></li>
                         <li className={router.asPath == "/resume/" ? "active" : ""}><Link href="/resume/">Resume</Link></li>
                     </ul>
                 </div>
