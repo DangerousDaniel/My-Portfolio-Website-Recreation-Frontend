@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }) {
                     I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment.
                     We are currently working on a 2.5D platformer called Vex Monsters.where you save monsters from an evil mysterious villain"/>
         <meta property="og:image" content="https://i.imgur.com/BMy6J0r.png" />
-        <meta property="og:url" content="https://dangerousdan996-nextjs-frontend.vercel.app/"></meta>
+        <meta property="og:url" content="https://www.dangerousdan996.com/"></meta>
 
         <link rel="icon" type="image/x-icon" href="images\logo\my_youtube_gaming_logo_2020_v2.2.png"></link>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
