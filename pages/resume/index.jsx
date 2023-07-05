@@ -24,19 +24,19 @@ export default function ResumeDetailPage({ resume }) {
                         </div>
 
                         <div className="col s12 ">
-                            <img src="/images/resume/daniel_cox_it_resume_page_1.png" alt="Daniel Cox IT Resume Page 1" width={800} className="responsive-img" />
+                            <img src="/images/resume/daniel_cox_it resume-page_1.png" alt="Daniel Cox IT Resume Page 1" width={800} className="responsive-img" />
                             <br />
                             <br />
                         </div>
 
                         <div className="col s12 ">
-                            <img src="/images/resume/daniel_cox_it_resume_page_2.png" alt="Daniel Cox IT Resume Page 2" width={800} className="responsive-img" />
+                            <img src="/images/resume/daniel_cox_it resume-page_2.png" alt="Daniel Cox IT Resume Page 2" width={800} className="responsive-img" />
                             <br />
                             <br />
                         </div>
 
                         <div className="col s12 ">
-                            <img src="/images/resume/daniel_cox_it_resume_page_3.png" alt="Daniel Cox IT Resume Page 3" width={800} className="responsive-img" />
+                            <img src="/images/resume/daniel_cox_it resume-page_3.png" alt="Daniel Cox IT Resume Page 3" width={800} className="responsive-img" />
                             <br />
                             <br />
                         </div>
