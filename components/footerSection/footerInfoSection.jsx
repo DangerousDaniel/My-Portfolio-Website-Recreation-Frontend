@@ -44,9 +44,9 @@ export default function FooterInfoSection() {
             <div className="col l4 s12">
                 <h5>About The Website</h5>
                 <p>
-                    This website is a collection of portfolio projects throughout my 3 years of experience as a game developer,
-                    and web application full stack developer. It is a recreation of my original portfolio website that was done in
-                    HTML5 and CSS3 with Bootstrap 4. The website frontend is built in Next JS  React Framework, and Materialize CSS Framework.
+                    This website is a collection of my portfolio projects throughout my 3 years of experience as a game developer, and full stack web application developer.
+                    It is a recreation of my original portfolio website that was done in HTML5 and CSS3 with Bootstrap 4.
+                    The website frontend is built in Next JS React Framework, and Materialize CSS Framework.
                     Its backend is built in  Django Web Framework, and Django REST Framework.
                 </p>
             </div>
