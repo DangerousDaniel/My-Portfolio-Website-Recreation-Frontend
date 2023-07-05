@@ -13,7 +13,7 @@ import ArticleCard from "../components/article/articleCard"
 import AboutSection from "../components/about/aboutSection";
 import getArticleAllQuickView from "../js/crud/article/read/getArticleAllQuickView";
 
-export default function HomePage({ articlesFirst, databaseMessageFirst, isErrorFirst, articlesSecond, databaseMessageSecond, isErrorSecond }) {
+export default function HomePage({ articles, databaseMessage, isError }) {
 
   useEffect(() => {
     document.title = `DangerousDan996 | Home`;
@@ -24,21 +24,11 @@ export default function HomePage({ articlesFirst, databaseMessageFirst, isErrorF
       <AboutSection></AboutSection>
       <div className="row ">
         <h3 className="white-text">Latest Articles</h3>
-        {isErrorFirst && <h4 className="red-text">{databaseMessageFirst}</h4>}
-        {isErrorSecond && <h4 className="red-text">{databaseMessageSecond}</h4>}
+        {isError && <h4 className="red-text">{databaseMessage}</h4>}
 
         <div className="col s12">
-          {articlesFirst &&
-            articlesFirst.map((article, index) => {
-              return (
-                <ArticleCard key={article.article_id} data={article}></ArticleCard>
-              )
-            })}
-        </div>
-
-        <div className="col s12"> 
-          {articlesSecond &&
-            articlesSecond.map((article, index) => {
+          {articles &&
+            articles.map((article, index) => {
               return (
                 <ArticleCard key={article.article_id} data={article}></ArticleCard>
               )
@@ -50,18 +40,13 @@ export default function HomePage({ articlesFirst, databaseMessageFirst, isErrorF
 }
 
 export async function getStaticProps() {
-  const fetchResponseFirst = await getArticleAllQuickView(0, 3)
-  const fetchResponseSecond = await getArticleAllQuickView(3, 6)
+  const fetchResponse = await getArticleAllQuickView(0, 3)
 
   return {
     props: {
-      articlesFirst: fetchResponseFirst.articlesListJsonData,
-      databaseMessageFirst: fetchResponseFirst.databaseMessage,
-      isErrorFirst: fetchResponseFirst.isError,
-
-      articlesSecond: fetchResponseSecond.articlesListJsonData,
-      databaseMessageSecond: fetchResponseSecond.databaseMessage,
-      isErrorSecond: fetchResponseSecond.isError
+      articles: fetchResponse.articlesListJsonData,
+      databaseMessage: fetchResponse.databaseMessage,
+      isError: fetchResponse.isError,
     },
     revalidate: 10,
   }

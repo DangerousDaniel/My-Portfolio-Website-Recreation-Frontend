@@ -30,18 +30,22 @@ export default function ArticleCategoryPage({ articles, category, databaseMessag
         {isErrorArticleAllQuickViewCategory && <h4 className="red-text">{databaseMessageArticleAllQuickViewCategory}</h4>}
         {isErrorCategoryDetail && <h4 className="red-text">{databaseMessageCategoryDetail}</h4>}
 
-        {category &&
-          <h3 className="white-text">{category.name}</h3>
-        }
+        <div className="col s12">
+          {category &&
+            <h3 className="white-text">{category.name}</h3>
+          }
+        </div>
 
-        {articles &&
-          articles.map((article, index) => {
-            return (
-              <div key={article.article_id}>
-                <ArticleCard data={article}></ArticleCard>
-              </div>
-            )
-          })}
+        <div className="col s12">
+          {articles &&
+            articles.map((article, index) => {
+              return (
+                <div key={article.article_id}>
+                  <ArticleCard data={article}></ArticleCard>
+                </div>
+              )
+            })}
+        </div>
       </div>
     </div>
   )

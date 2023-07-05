@@ -17,12 +17,6 @@ body {
   background-color: rgba(0,0,0,0.1) !important;
 }
 
-/* cards */
-.card-image {
-  width: 500x;
-  height: 300px;
-}
-
 /* iframe video responsive */
 @media only screen and (min-width:321px) and (max-width:1000px) {
   .iframe-container-video {
