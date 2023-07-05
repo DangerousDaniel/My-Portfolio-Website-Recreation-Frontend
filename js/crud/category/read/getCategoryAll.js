@@ -2,7 +2,7 @@
     Project Name: My Portfolio Website Recreation
     Authors: Daniel Cox
     Created Date: June 18, 2023
-    Last Updated: July 4, 2023
+    Last Updated: July 5, 2023
     Description: This is javascript file is for get category all from the database web sever.
     Notes:
     Resources: 
