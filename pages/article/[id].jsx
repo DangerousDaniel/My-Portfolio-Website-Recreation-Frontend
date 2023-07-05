@@ -11,11 +11,12 @@
 import { useEffect } from "react";
 import getArticleAll from "../../js/crud/article/read/getArticleAll";
 import getArticleDetail from "../../js/crud/article/read/getArticleDetail";
+import dayjs from "dayjs";
 
 export default function ArticleDetailPage({ article, databaseMessage, isError }) {
-    let options = null 
     let createdDate = null 
     let lastUpdateDate = null 
+
 
     useEffect(() => {
         if (isError === false) {
@@ -27,9 +28,8 @@ export default function ArticleDetailPage({ article, databaseMessage, isError })
     }, []);
 
     if (isError === false) {
-        options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-        createdDate = new Date(article.articleData.date_created)
-        lastUpdateDate = new Date(article.articleData.date_last_update)
+        createdDate = dayjs(article.articleData.date_created)
+        lastUpdateDate = dayjs(article.articleData.date_last_update)
     }
 
     return (
@@ -41,9 +41,9 @@ export default function ArticleDetailPage({ article, databaseMessage, isError })
                     <div className="row">
                         <div className="col s12">
                             <div className="row">
-                                <div className="right">Last Updated: {lastUpdateDate.toLocaleDateString("en-US", options)}</div>
+                                <div className="right">Last Updated: {lastUpdateDate.format('dddd, MMMM DD, YYYY')}</div>
                                 <br />
-                                <div className="right">Created Date: {createdDate.toLocaleDateString("en-US", options)}</div>
+                                <div className="right">Created Date: {createdDate.format('dddd, MMMM DD, YYYY')}</div>
                                 <div className="col s12"><h3>{article.articleData.name}</h3></div>
                                 {article.pageContext.map((page_context, index) => {
                                     return (
