@@ -1,3 +1,12 @@
+/* Backgrounds */
+body {
+  background-color: #37474f !important
+}
+
+.footer-copyright {
+  background-color: rgba(0,0,0,0.1) !important;
+}
+
 /* iframe video responsive */
 @media only screen and (min-width:321px) and (max-width:1000px) {
   .iframe-container-video {

@@ -16,7 +16,7 @@ import getArticleAllQuickViewCategory from "../../../js/crud/article/read/getArt
 
 export default function ArticleCategoryPage({ articles, category, databaseMessageArticleAllQuickViewCategory, isErrorArticleAllQuickViewCategory, databaseMessageCategoryDetail, isErrorCategoryDetail }) {
   useEffect(() => {
-    if (isErrorArticleAllQuickViewCategory === false && category) {
+    if (isErrorCategoryDetail === false && category) {
       document.title = `DangerousDan996 | ${category.name}`;
     }
     else {
@@ -30,13 +30,14 @@ export default function ArticleCategoryPage({ articles, category, databaseMessag
         {isErrorArticleAllQuickViewCategory && <h4 className="red-text">{databaseMessageArticleAllQuickViewCategory}</h4>}
         {isErrorCategoryDetail && <h4 className="red-text">{databaseMessageCategoryDetail}</h4>}
 
+        {category &&
+          <h3 className="white-text">{category.name}</h3>
+        }
+
         {articles &&
           articles.map((article, index) => {
             return (
               <div key={article.article_id}>
-                {category &&
-                  <h3 className="white-text">{category.name}</h3>
-                }
                 <ArticleCard data={article}></ArticleCard>
               </div>
             )
@@ -69,7 +70,7 @@ export async function getStaticProps(context) {
 
       databaseMessageArticleAllQuickViewCategory: fetchResponseArticleAllQuickViewCategory.databaseMessage,
       isErrorArticleAllQuickViewCategory: fetchResponseArticleAllQuickViewCategory.isError,
-      
+
       databaseMessageCategoryDetail: fetchResponseCategoryDetail.databaseMessage,
       isErrorCategoryDetail: fetchResponseCategoryDetail.isError
     }
