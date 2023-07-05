@@ -73,6 +73,7 @@ export async function getStaticProps(context) {
 
       databaseMessageCategoryDetail: fetchResponseCategoryDetail.databaseMessage,
       isErrorCategoryDetail: fetchResponseCategoryDetail.isError
-    }
+    },
+    revalidate: 10
   }
 }

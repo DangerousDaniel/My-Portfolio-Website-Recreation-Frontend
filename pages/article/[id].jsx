@@ -126,6 +126,6 @@ export async function getStaticProps(context) {
             databaseMessage: fetchResponse.databaseMessage,
             isError: fetchResponse.isError
         },
-        revalidate: 10,
+        revalidate: 10
     }
 }
