@@ -1,4 +1,14 @@
-/* Backgrounds */
+/*
+    Project Name: My Portfolio Website Recreation
+    Authors: Daniel Cox
+    Created Date: May 11, 2023
+    Last Updated: July 4, 2023
+    Description: This is the global css stylesheets.
+    Notes:
+    Resources: 
+*/
+
+/* backgrounds */
 body {
   background-color: #37474f !important
 }

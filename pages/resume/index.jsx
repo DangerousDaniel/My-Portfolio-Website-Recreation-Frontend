@@ -42,7 +42,7 @@ export default function ResumeDetailPage({ resume }) {
                         </div>
 
                         <div className="col s12">
-                            <h5><a className="blue-text" target="_blank" href="https://github.com/DangerousDaniel/My-Portfolio-Website-Recreation-Frontend/blob/daniel-make-the-site-responsive/mywebsiterecreationfrontend/public/pdfs/daniel_cox_it_resume.pdf">PDF HERE</a></h5>
+                            <h5><a className="blue-text" target="_blank" href="https://github.com/DangerousDaniel/My-Portfolio-Website-Recreation-Frontend/blob/main/public/pdfs/daniel_cox_it_resume.pdf">PDF HERE</a></h5>
                         </div>
                 </div>
             </div>
