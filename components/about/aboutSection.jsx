@@ -19,13 +19,13 @@ export default function AboutSection() {
                 <h2>About Me</h2>
                 <p>
                     I graduated from NSCC IT Programming (Class of 2020).
-                    For the last 3 years I've been developing a 2.5D fantasy RPG platform game named Vex Monsters,
-                    where you save monsters from an evil mysterious villain.
+                    I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment.
+                    We are currently working on a 2.5D platformer called Vex Monsters.where you save monsters from an evil mysterious villain.
                 </p>
                 <p>
-                    Throughout my experience as a programmer,
-                    I have completed several challenging projects for game development (General),
-                    and web application backend. These projects taught me a hands-on mindset and approach.
+                    Throughout my experience as a Programmer/Team Leader,
+                    I have completed several challenging projects for game development, and full stack web application.
+                    These projects taught me a hands-on mindset and approach.
                     I learned how to analyze, study, and apply learning to figure out solutions when working alone or with a team.
                 </p>
             </div>
