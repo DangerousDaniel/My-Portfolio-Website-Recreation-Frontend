@@ -11,7 +11,7 @@
 export default function FooterCopyrightSection() {
     return (
         <div className="footer-copyright">
-            <div className="container">
+            <div className="container center-align">
                 &copy; 2013 - 2023 DangerousDan996 | All Rights Reserved.
             </div>
         </div>
