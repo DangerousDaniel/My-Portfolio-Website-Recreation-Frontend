@@ -28,14 +28,14 @@ export default function App({ Component, pageProps }) {
 
         {/* Open Graph / Facebook Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metatags.io" />
+        <meta property="og:url" content="https://www.dangerousdan996.com/" />
         <meta property="og:title" content="DangerousDan996 Portfolio Website" />
         <meta property="og:description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
         <meta property="og:image" content="https://i.imgur.com/BMy6J0r.png" />
 
         {/* Twitter  Tags */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io" />
+        <meta property="twitter:url" content="https://www.dangerousdan996.com/" />
         <meta property="twitter:title" content="DangerousDan996 Portfolio Website" />
         <meta property="twitter:description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
         <meta property="twitter:image" content="https://i.imgur.com/BMy6J0r.png" />
