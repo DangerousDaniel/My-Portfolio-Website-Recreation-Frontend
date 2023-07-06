@@ -40,8 +40,8 @@ export default function NavBar() {
                     <a onClick={toggleMobileMenu} className="right waves-effect waves-light btn blue-grey darken-2"><i className="material-icons">close</i></a>
                     <ul>
                         <li className="nav-sidebar-user-view-mobile">
-                                <a href="#user"><img class="circle" src="/images/logo/my_youtube_gaming_logo_2020_v2.2.png" width="20%" /></a>
-                                <a href="#name"><span class="white-text name">DangerousDan996</span></a>
+                                <Link href="/"><img class="circle" src="/images/logo/my_youtube_gaming_logo_2020_v2.2.png" width="20%" /></Link>
+                                <Link href="/"><span class="white-text name">DangerousDan996</span></Link>
                         </li>
                         <div class="divider"></div>
                     </ul>
