@@ -21,18 +21,18 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <meta name="title" content="DangerousDan996 Portfolio Website" />
-        <meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!" />
+        <meta name="description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dangerousdan996.com/" />
         <meta property="og:title" content="DangerousDan996 Portfolio Website" />
-        <meta property="og:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!" />
+        <meta property="og:description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
         <meta property="og:image" content="https://imgur.com/u33c1tf.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dangerousdan996.com/" />
         <meta property="twitter:title" content="DangerousDan996 Portfolio Website" />
-        <meta property="twitter:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!" />
+        <meta property="twitter:description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
         <meta property="twitter:image" content="https://imgur.com/u33c1tf.png" />
 
         <link rel="icon" type="image/x-icon" href="images\logo\my_youtube_gaming_logo_2020_v2.2.png"></link>
