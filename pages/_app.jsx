@@ -31,14 +31,14 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://metatags.io" />
         <meta property="og:title" content="DangerousDan996 Portfolio Website" />
         <meta property="og:description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
-        <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+        <meta property="og:image" content="https://i.imgur.com/BMy6J0r.png" />
 
         {/* Twitter  Tags */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://metatags.io" />
         <meta property="twitter:title" content="DangerousDan996 Portfolio Website" />
         <meta property="twitter:description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
-        <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+        <meta property="twitter:image" content="https://i.imgur.com/BMy6J0r.png" />
 
         {/* Links Tags */}
         <link rel="icon" type="image/x-icon" href="images\logo\my_youtube_gaming_logo_2020_v2.2.png"></link>
