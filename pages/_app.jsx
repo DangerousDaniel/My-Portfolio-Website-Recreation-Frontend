@@ -31,14 +31,14 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://www.dangerousdan996.com/" />
         <meta property="og:title" content="DangerousDan996 Portfolio Website" />
         <meta property="og:description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
-        <meta property="og:image" href="images/vexmonsters/Screenshot 2022-03-25-121939.jpg" />
+        <meta property="og:image" content="images/vexmonsters/Screenshot 2022-03-25-121939.jpg" />
 
         {/* Twitter  Tags */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dangerousdan996.com/" />
         <meta property="twitter:title" content="DangerousDan996 Portfolio Website" />
         <meta property="twitter:description" content="I build 2D/3D games for game jam, personal projects and 2.5D games for my indie game team named Monstrous Entertainment." />
-        <meta property="twitter:image" href="images\vexmonsters\Screenshot 2022-03-25-121939.jpg" />
+        <meta property="twitter:image" content="images\vexmonsters\Screenshot 2022-03-25-121939.jpg" />
 
         {/* Links Tags */}
         <link rel="icon" type="image/x-icon" href="images\logo\my_youtube_gaming_logo_2020_v2.2.png"></link>
