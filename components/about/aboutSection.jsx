@@ -12,7 +12,7 @@ export default function AboutSection() {
     return (
         <div className="row">
             <div className="col s12 l5">
-                <img src={`/images/profile/my_profile_picture_2023.png`} alt="Daniel Cox's Profile Picture" width={250} height={300} />
+                <img src={`/images/profile/my_profile_picture_2023_2.jpg`} alt="Daniel Cox's Profile Picture" width={250} height={300} />
             </div>
 
             <div className="col s12 l6 white-text">
