@@ -18,9 +18,10 @@ export default function AboutSection() {
             <div className="col s12 l6 white-text">
                 <h2>About Me</h2>
                 <p>
-                    I graduated from NSCC IT Programming (Class of 2020).
-                    I build 2D/3D games for game jam, personal projects and 2D/3D games for my indie game team named Monstrous Entertainment.
-                    We are currently working on a 2.5D platformer called Vex Monsters, where you save monsters from an evil mysterious villain.
+                    I graduated from NSCC IT Programming (Class of 2020). 
+                    I build 2D/3D games for game jams and personal projects. 
+                    I also build 2D/3D games with my indie game team named Monstrous Entertainment. 
+                    We are currently working on a 2D platformer named Cat Chef.
                 </p>
                 <p>
                     Throughout my experience as a Programmer/Team Leader,
