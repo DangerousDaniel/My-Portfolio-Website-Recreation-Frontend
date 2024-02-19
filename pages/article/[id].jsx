@@ -62,6 +62,7 @@ export default function ArticleDetailPage({ article, databaseMessage, isError })
                                                     <br />
                                                     <span>{page_context.image.description}</span>
                                                     <br />
+                                                    <br />
                                                 </div>
                                             }
 
