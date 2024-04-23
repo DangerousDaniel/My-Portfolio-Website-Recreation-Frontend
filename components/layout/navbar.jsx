@@ -30,7 +30,7 @@ export default function NavBar() {
                         <li className={router.asPath == "/" ? "active" : ""}><Link href="/">Home</Link></li>
                         <li className={router.asPath == "/article/category/1" ? "active" : ""}><Link href="/article/category/1">Monstrous Ent Game Demos</Link></li>
                         <li className={router.asPath == "/article/category/2" ? "active" : ""}><Link href="/article/category/2">Web Application Projects</Link></li>
-                        <li className={router.asPath == "/article/category/3" ? "active" : ""}><Link href="/article/category/3">Other Articles</Link></li>
+                        {/* <li className={router.asPath == "/article/category/3" ? "active" : ""}><Link href="/article/category/3">Other Articles</Link></li> */}
                         <li className={router.asPath == "/resume" ? "active" : ""}><Link href="/resume">Resume</Link></li>
                     </ul>
                 </div>
