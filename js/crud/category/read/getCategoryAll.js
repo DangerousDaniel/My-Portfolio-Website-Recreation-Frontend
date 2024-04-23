@@ -9,7 +9,7 @@
 */
 
 const getCategoryAll = async () => {
-    const response = await fetch(`https://dangerousdan996-django-backend-86bfbdd18077.herokuapp.com/category/all`, {
+    const response = await fetch(`https://my-website-recreate-datebase-07a966ba4870.herokuapp.com/category/all`, {
         method: 'GET', headers: {
             'Accept': 'application/json',
             "Content-Type": "application/json"
