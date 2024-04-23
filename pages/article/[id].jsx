@@ -14,8 +14,8 @@ import getArticleDetail from "../../js/crud/article/read/getArticleDetail";
 import dayjs from "dayjs";
 
 export default function ArticleDetailPage({ article, databaseMessage, isError }) {
-    let createdDate = null 
-    let lastUpdateDate = null 
+    let createdDate = null
+    let lastUpdateDate = null
 
 
     useEffect(() => {
@@ -61,6 +61,8 @@ export default function ArticleDetailPage({ article, databaseMessage, isError })
                                                     <img src={page_context.image.link} alt={page_context.image.name} width={500} className="responsive-img" />
                                                     <br />
                                                     <span>{page_context.image.description}</span>
+                                                    <br />
+                                                    <br />
                                                 </div>
                                             }
 
