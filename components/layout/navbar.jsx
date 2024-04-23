@@ -49,7 +49,7 @@ export default function NavBar() {
                         <li className={router.asPath == "/" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"} ><Link className="white-text" href="/">Home</Link></li>
                         <li className={router.asPath == "/article/category/1" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"}><Link className="white-text" href="/article/category/1">Monstrous Ent Game Demos</Link></li>
                         <li className={router.asPath == "/article/category/2" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"}><Link className="white-text" href="/article/category/2">Web Application Projects</Link></li>
-                        <li className={router.asPath == "/article/category/3" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"}><Link className="white-text" href="/article/category/3">Other Articles</Link></li>
+                        {/* <li className={router.asPath == "/article/category/3" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"}><Link className="white-text" href="/article/category/3">Other Articles</Link></li> */}
                         <li className={router.asPath == "/resume" ? "nav-item-mobile active-nav-item-mobile" : "nav-item-mobile"}><Link className="white-text" href="/resume">Resume</Link></li>
                     </ul>
                 </div>
