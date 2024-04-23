@@ -9,7 +9,7 @@
 */
 
 const getArticleAllQuickView = async (offsetNum = 0, limitNum = 10) => {
-    const response = await fetch(`https://dangerousdan996-django-backend-86bfbdd18077.herokuapp.com/article/all/quick-view/${offsetNum}/${limitNum}`, {
+    const response = await fetch(`https://my-website-recreate-datebase-07a966ba4870.herokuapp.com/article/all/quick-view/${offsetNum}/${limitNum}`, {
         method: 'GET', headers: {
             'Accept': 'application/json',
             "Content-Type": "application/json"

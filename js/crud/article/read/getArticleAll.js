@@ -9,7 +9,7 @@
 */
 
 const getArticleAll = async () => {
-    const response = await fetch(`https://dangerousdan996-django-backend-86bfbdd18077.herokuapp.com/article/all`, {
+    const response = await fetch(`https://my-website-recreate-datebase-07a966ba4870.herokuapp.com/article/all`, {
         method: 'GET', headers: {
             'Accept': 'application/json',
             "Content-Type": "application/json"
